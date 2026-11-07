@@ -1,0 +1,162 @@
+{
+  "status": "COMPLETED_REAL_TRAINING_SPECTRAL_ANALYSIS",
+  "date": "2026-11-05",
+  "n_kernels": 2660,
+  "unique_filename_ids": 2660,
+  "scope": "Current frozen training manifest only; no validation/test cube contents or predictions read. Historical summary read separately for point-estimate tracing.",
+  "representation": "Foreground-mean exported relative-reflectance spectra after per-kernel SPA-style anomaly repair/boundary treatment; before training-column z-scoring and network normalization.",
+  "sg": "Author-confirmed export workflow: pixel-level SG window11/order3/derivative0/nearest. No extra SG applied here.",
+  "foreground_definition": "sum of 454 band values > 1e-6; each kernel has equal weight in its class mean; no pixel-weighted pooling across kernels.",
+  "exclusions": "No included training records removed; finite spectra and nonempty foreground verified. No new kernel outlier exclusion or winsorization.",
+  "wavelength_window": {
+    "band_indices_zero_based": [
+      152,
+      272
+    ],
+    "n_bands": 121,
+    "actual_endpoints_nm": [
+      1201.28,
+      1399.09
+    ],
+    "equal_band_weighting": true,
+    "spa24_subset_only": false
+  },
+  "validation": {
+    "all_training_hdr_raw_hashes_match": true,
+    "max_cached_raw_recompute_abs_error": 0.0,
+    "max_cached_processed_recompute_abs_error": 0.0,
+    "raw_vs_processed_max_difference_in_window": 0.0,
+    "hsi_bytes_read": 1125070112,
+    "processed_window_range": [
+      0.13480737805366516,
+      0.41916707158088684
+    ]
+  },
+  "bootstrap": {
+    "n": 2000,
+    "rng": "NumPy Generator PCG64",
+    "seed": 20261105,
+    "resampling": "independent within-cultivar multinomial counts equivalent to sampling n kernels with replacement",
+    "interval": "95% percentile, quantile method linear",
+    "limits": "Conditional kernel/file-level uncertainty for this collection, not lot/session-resampled or external-source uncertainty. Bandwise intervals are pointwise, not simultaneous. Nonnegative absolute-distance intervals are not a null-hypothesis separation test."
+  },
+  "class_counts": [
+    {
+      "cultivar": "CX186",
+      "n_kernels": 630,
+      "foreground_pixels_total": 115419,
+      "foreground_pixels_min": 109,
+      "foreground_pixels_median": 184.0,
+      "foreground_pixels_mean": 183.2047619047619,
+      "foreground_pixels_max": 246,
+      "mean_within_class_sd_1200_1400": 0.022520462263736003
+    },
+    {
+      "cultivar": "XK129",
+      "n_kernels": 700,
+      "foreground_pixels_total": 123708,
+      "foreground_pixels_min": 122,
+      "foreground_pixels_median": 177.0,
+      "foreground_pixels_mean": 176.72571428571428,
+      "foreground_pixels_max": 241,
+      "mean_within_class_sd_1200_1400": 0.028682442261573612
+    },
+    {
+      "cultivar": "ZM22",
+      "n_kernels": 700,
+      "foreground_pixels_total": 118908,
+      "foreground_pixels_min": 116,
+      "foreground_pixels_median": 170.0,
+      "foreground_pixels_mean": 169.86857142857144,
+      "foreground_pixels_max": 243,
+      "mean_within_class_sd_1200_1400": 0.020976909864073776
+    },
+    {
+      "cultivar": "ZM379",
+      "n_kernels": 630,
+      "foreground_pixels_total": 119207,
+      "foreground_pixels_min": 128,
+      "foreground_pixels_median": 189.0,
+      "foreground_pixels_mean": 189.2174603174603,
+      "foreground_pixels_max": 302,
+      "mean_within_class_sd_1200_1400": 0.019190024773144944
+    }
+  ],
+  "new_training_results": [
+    {
+      "cultivar_a": "ZM22",
+      "cultivar_b": "XK129",
+      "split": "train",
+      "n_a": 700,
+      "n_b": 700,
+      "n_wavelengths": 121,
+      "wavelength_low_nm": 1201.28,
+      "wavelength_high_nm": 1399.09,
+      "mean_absolute_class_mean_difference": 0.029109862994275093,
+      "bootstrap_percentile_95_low": 0.02659179315314471,
+      "bootstrap_percentile_95_high": 0.031701401655849205,
+      "bootstrap_repetitions": 2000
+    },
+    {
+      "cultivar_a": "CX186",
+      "cultivar_b": "ZM379",
+      "split": "train",
+      "n_a": 630,
+      "n_b": 630,
+      "n_wavelengths": 121,
+      "wavelength_low_nm": 1201.28,
+      "wavelength_high_nm": 1399.09,
+      "mean_absolute_class_mean_difference": 0.0017918046909368224,
+      "bootstrap_percentile_95_low": 0.0012196026286900757,
+      "bootstrap_percentile_95_high": 0.0038306170278090143,
+      "bootstrap_repetitions": 2000
+    }
+  ],
+  "historical_reproduction": [
+    {
+      "cultivar_a": "ZM22",
+      "cultivar_b": "XK129",
+      "n_a_recorded": 1000,
+      "n_b_recorded": 1000,
+      "archived_mean_distance_recomputed": 0.028275111243744527,
+      "rounded_4_decimals": "0.0283",
+      "scope": "archived full-collection class-mean summary; not train-only",
+      "source_sha256": "c8bd47c44ecf8540302cb9e9157ee2041691e7d88f7d29d83a718466a20296c2"
+    },
+    {
+      "cultivar_a": "CX186",
+      "cultivar_b": "ZM379",
+      "n_a_recorded": 900,
+      "n_b_recorded": 900,
+      "archived_mean_distance_recomputed": 0.0014121006589290525,
+      "rounded_4_decimals": "0.0014",
+      "scope": "archived full-collection class-mean summary; not train-only",
+      "source_sha256": "c8bd47c44ecf8540302cb9e9157ee2041691e7d88f7d29d83a718466a20296c2"
+    }
+  ],
+  "historical_trace_limit": "Archived means and exporter document full-collection equal-kernel summaries; the original per-kernel foreground pixel ledger was not retained. New training analysis supplies an authenticated current ledger.",
+  "chemical_reference": "No biochemical measurements inferred; no retraining/model selection performed.",
+  "analysis_timing": "Post hoc descriptive analysis responding to the reviewer; no new tuning of bands, normalization or model hyperparameters.",
+  "environment": {
+    "python": "3.12.11",
+    "numpy": "2.3.4"
+  },
+  "source_hashes": {
+    "spectral_comment20\\analyze_spectra.py": "089222cc80bbe35a3d98c23419c2b9e72f8c1bda11c1ebadee7e84dd151578d6",
+    "spectral_metadata\\controlled_refit_2026-11-05\\training_content_manifest.json": "9348433b6fb544d1a6b838f0a0f47472beff6992cef972785857f4dab75824b1",
+    "spectral_metadata\\controlled_refit_2026-11-05\\training_spectra_raw.npy": "81c4f549385a57e337c5fa2cc03e51fd9adc383125eeaa15d264393c38aefd95",
+    "spectral_metadata\\controlled_refit_2026-11-05\\training_spectra_preprocessed.npy": "caece59bf6c037142e6d80ee5cc11703b69b9d376ccd439362004705f96d8fb0",
+    "spectral_metadata\\controlled_refit_2026-11-05\\training_wavelengths.npy": "0dfa53db01003592e4b89460e375c7260554b724cd23df5a19c7d114c60ed537",
+    "F:\\00 Paper-Summary\\1.HSMF-Net-Paper\\01-Experiments\\MobileNet_Ablation_Code-V3\\src\\mobilenet_enterprise\\data\\wheat_seed_hsi.py": "beeaee76abe55c1229719e02d5f938a82bbf228057c0e45ed0b03b22cc800b10",
+    "F:\\00 Paper-Summary\\1.HSMF-Net-Paper\\01-Experiments\\MobileNet_Ablation_Code-V3\\artifacts\\sci_s1s6_tvt701515_2026-07-11_09-37\\comparison\\extra_data\\error_analysis\\sci_s6_fusion_hybrid_midfilm_spa24_seed42\\class_mean_std_spectra.csv": "c8bd47c44ecf8540302cb9e9157ee2041691e7d88f7d29d83a718466a20296c2",
+    "F:\\00 Paper-Summary\\1.HSMF-Net-Paper\\01-Experiments\\MobileNet_Ablation_Code-V3\\scripts\\export_error_analysis_samples.py": "72633450b4d4cfafaa06f8315e9a5e7de0f9d7fd597c27a2b3cfc20700b14690"
+  },
+  "rendering": {
+    "source": "render_figures.py",
+    "source_sha256": "c7ab1450d1e828cb1d99074fe74b29a80abba620f5d2a64b27007e85fc65cf56",
+    "common_pairwise_y_scales": true,
+    "main_figure": "figure_11_training_revised.png",
+    "case_manifest_sha256": "8db2d0d1ca1fd0df6f539eaee93801bd97ecaba48942e542dd94caf2676311b7",
+    "notes": "Original eight archived images/confidences retained. Statistical panels use current TRAIN spectra, no individual error-spectrum overlays. SD upper / pointwise bootstrap lower; scalar D intervals in annotations. Original all-collection distances traced separately."
+  }
+}

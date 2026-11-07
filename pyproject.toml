@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mobilenet-enterprise"
+version = "0.1.0"
+description = "MobileNetV3 RGB/HSI ablation experiments with PyTorch."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "torch>=2.2.0",
+  "torchvision>=0.17.0",
+  "PyYAML>=6.0.1",
+  "numpy>=1.26.0",
+  "Pillow>=10.0.0",
+  "tqdm>=4.66.0",
+  "tensorboard>=2.16.0",
+  "thop>=0.1.1.post2209072238",
+  "matplotlib>=3.8.0",
+  "scikit-learn",
+  "scipy",
+  "threadpoolctl>=3.1",
+]
+
+[project.optional-dependencies]
+external = ["fvcore"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "numpy": "2.3.4",
+  "training_kernels": 2660,
+  "candidate_range_zero_based": [
+    10,
+    438
+  ],
+  "actual_first_band": 12,
+  "synthetic_exact_tie_first_band": 10,
+  "progressive_trace_reproduced": true,
+  "independent_24_matches_50_prefix": true,
+  "matrix_sha256": "caece59bf6c037142e6d80ee5cc11703b69b9d376ccd439362004705f96d8fb0",
+  "selector_source_sha256": "beeaee76abe55c1229719e02d5f938a82bbf228057c0e45ed0b03b22cc800b10",
+  "historical_fit_membership_authenticated": false,
+  "initialization_robustness_established": false,
+  "reported_indices_changed": false,
+  "model_training": false
+}

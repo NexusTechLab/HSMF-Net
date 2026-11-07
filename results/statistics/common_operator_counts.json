@@ -1,0 +1,77 @@
+{
+  "source": "existing per-operator fvcore audit records, recomputed arithmetic only",
+  "convention": "2 FLOPs/MAC; conv, linear, einsum, matmul and bmm counted; norm, activations, resizing and pointwise operations excluded",
+  "boundary_inputs": "batch1: RGB 3x224x224; HSI 1x24x24x24, with method-specific input adapters",
+  "historical_S8_THOP_value_unchanged": 0.3294,
+  "new_timing_or_training": false,
+  "rows": [
+    {
+      "model": "CLOLN",
+      "params_m": 0.00319,
+      "common_operator_gflops": 0.002562496,
+      "macs_by_operator": {
+        "conv": 1281024,
+        "linear": 224
+      },
+      "evidence": "results/external_seed42/cloln/efficiency.json",
+      "evidence_sha256": "72e2f2238a44318701da36e13bd28b986d98fc83519855a59ecdb251fbae145f"
+    },
+    {
+      "model": "MixerSENet",
+      "params_m": 0.052044,
+      "common_operator_gflops": 0.055962112,
+      "macs_by_operator": {
+        "conv": 27979776,
+        "linear": 1280
+      },
+      "evidence": "results/external_seed42/mixersenet/efficiency.json",
+      "evidence_sha256": "407a27776107b130b16fb65e93cb36743bfe9ee7b2db495055ef1f6470e4b8f3"
+    },
+    {
+      "model": "3D-ConvSST",
+      "params_m": 0.229412,
+      "common_operator_gflops": 0.484983296,
+      "macs_by_operator": {
+        "conv": 100933632,
+        "linear": 56623360,
+        "matmul": 84934656
+      },
+      "evidence": "results/external_seed42/convsst/efficiency.json",
+      "evidence_sha256": "001065bc5f2db2b6be66bc458fcb769721df730141ee2b412686b67a26587752"
+    },
+    {
+      "model": "ResNet-R&H",
+      "params_m": 11.17146,
+      "common_operator_gflops": 0.625512448,
+      "macs_by_operator": {
+        "conv": 312754176,
+        "linear": 2048
+      },
+      "evidence": "results/external_seed42/resnet_rh/efficiency.json",
+      "evidence_sha256": "130d368442d5770c2c3e4f0abbaf48a0aa305f4484319f10b66737c891132bd6"
+    },
+    {
+      "model": "MFT",
+      "params_m": 0.22634,
+      "common_operator_gflops": 0.04049846,
+      "macs_by_operator": {
+        "conv": 14340096,
+        "einsum": 5097870.0,
+        "linear": 811264
+      },
+      "evidence": "results/external_seed42/mft/efficiency.json",
+      "evidence_sha256": "ebc158d697963503708f5248d294056a3b0b9e3a388c7ccc57243a618ec518b4"
+    },
+    {
+      "model": "HSMF-Net 24-band architecture",
+      "params_m": 2.659402,
+      "common_operator_gflops": 0.635870016,
+      "macs_by_operator": {
+        "conv": 317882016,
+        "linear": 52992
+      },
+      "evidence": "results/external_seed42/hsmf/efficiency.json",
+      "evidence_sha256": "06c61fa48aa6092c94a07e2040057e17bf658601851cc7c4e33b53c50cd9075a"
+    }
+  ]
+}

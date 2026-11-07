@@ -1,0 +1,6 @@
+﻿method,model,modality,accuracy_pct_mean,accuracy_pct_sd,macro_f1_pct_mean,macro_f1_pct_sd,params_m,gflops,latency_ms_mean,latency_ms_reported_sd,n_runs,seeds,source,raw_per_seed_recomputed,latency_sd_aggregation
+cloln,CLOLN [52],HSI,88.25,2.21,88.35,2.25,0.0032,0.0026,0.7,1.73,5,"42,43,44,45,46",Author-provided updated table and explicit five-seed confirmation in conversation,False,Not separately confirmed
+mixersenet,MixerSENet [53],HSI,94.39,2.25,94.44,2.17,0.052,0.056,6.08,1.27,5,"42,43,44,45,46",Author-provided updated table and explicit five-seed confirmation in conversation,False,Not separately confirmed
+convsst,3D-ConvSST [54],HSI,93.51,1.96,93.63,2.11,0.2294,0.485,8.49,1.59,5,"42,43,44,45,46",Author-provided updated table and explicit five-seed confirmation in conversation,False,Not separately confirmed
+resnet_rh,ResNet-R&H [55],RGB + HSI mean spectrum,85.26,0.89,85.31,0.96,11.1715,0.6255,4.27,0.56,5,"42,43,44,45,46",Author-provided updated table and explicit five-seed confirmation in conversation,False,Not separately confirmed
+mft,MFT [56],RGB + HSI,90.35,1.12,90.43,1.27,0.2263,0.0405,7.39,0.79,5,"42,43,44,45,46",Author-provided updated table and explicit five-seed confirmation in conversation,False,Not separately confirmed

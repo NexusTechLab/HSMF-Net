@@ -1,0 +1,42 @@
+{
+  "n_test": 570,
+  "correct": 555,
+  "accuracy_pct": 97.36842105263158,
+  "macro_f1_pct": 97.38412440353318,
+  "confusion_counts": [
+    [
+      134,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      147,
+      3,
+      0
+    ],
+    [
+      0,
+      3,
+      146,
+      1
+    ],
+    [
+      2,
+      2,
+      3,
+      128
+    ]
+  ],
+  "variant": "no_modulation24",
+  "seed": 45,
+  "checkpoint_epoch": 76,
+  "checkpoint_stream": "ema_model",
+  "checkpoint_sha256": "39785f08b5b10dcf2e390fbd89d2da4d433fe12250f1d8f754596c0e766b360a",
+  "config_sha256": "180041b0803e82f91f1723cb78c30e0ae9743baa2b8775c6bcce3ed921174447",
+  "protocol_sha256": "e9f1faaa2873e1a659778f0e428de60e0c0b0b5e775cc52e0b26e031ea89d283",
+  "manifest_sha256": "111ae3beaf4b77f0cc63f06c4dfc886d99bbe5397422433a9ea3df186cadd05f",
+  "predictions_sha256": "82e5a2df4cf882378bc10b0724302039d8201e4d3222ea430099e39c84a19c21",
+  "parameters": 2615594
+}

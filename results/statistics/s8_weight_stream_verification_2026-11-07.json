@@ -1,0 +1,140 @@
+{
+  "date": "2026-11-07",
+  "scope": "S8 seeds 42–46 only; prediction replay, no training",
+  "checkpoint_selection": "EMA validation minibatch-mean accuracy; first maximum",
+  "archived_prediction_weight_stream": "ordinary model weights at the selected epoch",
+  "comparison": "All four logits for every test observation, plus targets and predicted labels; not aggregate-accuracy matching",
+  "runs": [
+    {
+      "seed": 42,
+      "epoch": 51,
+      "checkpoint_ema_eval_active": true,
+      "n_test": 570,
+      "archive_correct": 529,
+      "streams": {
+        "model": {
+          "matched_logit_vectors": 570,
+          "max_logit_absolute_difference": 0.0,
+          "all_logits_bitwise_equal": true,
+          "true_labels_match": true,
+          "predicted_labels_match": true,
+          "archive_reproduced": true
+        },
+        "ema_model": {
+          "matched_logit_vectors": 0,
+          "max_logit_absolute_difference": 2.7706408500671387,
+          "all_logits_bitwise_equal": false,
+          "true_labels_match": true,
+          "predicted_labels_match": false,
+          "archive_reproduced": false
+        }
+      }
+    },
+    {
+      "seed": 43,
+      "epoch": 73,
+      "checkpoint_ema_eval_active": true,
+      "n_test": 570,
+      "archive_correct": 546,
+      "streams": {
+        "model": {
+          "matched_logit_vectors": 570,
+          "max_logit_absolute_difference": 0.0,
+          "all_logits_bitwise_equal": true,
+          "true_labels_match": true,
+          "predicted_labels_match": true,
+          "archive_reproduced": true
+        },
+        "ema_model": {
+          "matched_logit_vectors": 0,
+          "max_logit_absolute_difference": 1.8357467651367188,
+          "all_logits_bitwise_equal": false,
+          "true_labels_match": true,
+          "predicted_labels_match": false,
+          "archive_reproduced": false
+        }
+      }
+    },
+    {
+      "seed": 44,
+      "epoch": 76,
+      "checkpoint_ema_eval_active": true,
+      "n_test": 570,
+      "archive_correct": 544,
+      "streams": {
+        "model": {
+          "matched_logit_vectors": 570,
+          "max_logit_absolute_difference": 0.0,
+          "all_logits_bitwise_equal": true,
+          "true_labels_match": true,
+          "predicted_labels_match": true,
+          "archive_reproduced": true
+        },
+        "ema_model": {
+          "matched_logit_vectors": 0,
+          "max_logit_absolute_difference": 1.6086246967315674,
+          "all_logits_bitwise_equal": false,
+          "true_labels_match": true,
+          "predicted_labels_match": false,
+          "archive_reproduced": false
+        }
+      }
+    },
+    {
+      "seed": 45,
+      "epoch": 98,
+      "checkpoint_ema_eval_active": true,
+      "n_test": 570,
+      "archive_correct": 551,
+      "streams": {
+        "model": {
+          "matched_logit_vectors": 570,
+          "max_logit_absolute_difference": 0.0,
+          "all_logits_bitwise_equal": true,
+          "true_labels_match": true,
+          "predicted_labels_match": true,
+          "archive_reproduced": true
+        },
+        "ema_model": {
+          "matched_logit_vectors": 0,
+          "max_logit_absolute_difference": 1.2255873680114746,
+          "all_logits_bitwise_equal": false,
+          "true_labels_match": true,
+          "predicted_labels_match": false,
+          "archive_reproduced": false
+        }
+      }
+    },
+    {
+      "seed": 46,
+      "epoch": 98,
+      "checkpoint_ema_eval_active": true,
+      "n_test": 570,
+      "archive_correct": 554,
+      "streams": {
+        "model": {
+          "matched_logit_vectors": 570,
+          "max_logit_absolute_difference": 0.0,
+          "all_logits_bitwise_equal": true,
+          "true_labels_match": true,
+          "predicted_labels_match": true,
+          "archive_reproduced": true
+        },
+        "ema_model": {
+          "matched_logit_vectors": 0,
+          "max_logit_absolute_difference": 0.5879302024841309,
+          "all_logits_bitwise_equal": false,
+          "true_labels_match": true,
+          "predicted_labels_match": false,
+          "archive_reproduced": false
+        }
+      }
+    }
+  ],
+  "n_prediction_events": 2850,
+  "n_test_entries_per_run": 570,
+  "all_ordinary_logits_bitwise_identical": true,
+  "all_ema_streams_fail_archive_match": true,
+  "all_40_checkpoint_and_log_hashes_rechecked": true,
+  "other_configurations_prediction_streams_not_inferred": true
+}

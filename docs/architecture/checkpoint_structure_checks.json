@@ -1,0 +1,42 @@
+[
+  {
+    "model": "S8",
+    "seed": 42,
+    "stream": "model",
+    "state_entries": 468,
+    "keys_and_shapes_match": true,
+    "checkpoint_sha256": "2d41fcd77a877603c3d8263a7b4a726978d0c774a704e4e0b0708d05120802a1",
+    "pretraining_metadata_keys": [],
+    "note": "State-key/shape compatibility only; no historical prediction or input authentication."
+  },
+  {
+    "model": "S8",
+    "seed": 42,
+    "stream": "ema_model",
+    "state_entries": 468,
+    "keys_and_shapes_match": true,
+    "checkpoint_sha256": "2d41fcd77a877603c3d8263a7b4a726978d0c774a704e4e0b0708d05120802a1",
+    "pretraining_metadata_keys": [],
+    "note": "State-key/shape compatibility only; no historical prediction or input authentication."
+  },
+  {
+    "model": "S7",
+    "seed": 42,
+    "stream": "model",
+    "state_entries": 468,
+    "keys_and_shapes_match": true,
+    "checkpoint_sha256": "441b42f6718fc3fdbb5fe4c5426dbeb13bcdd10242a6c743195f3489b481252c",
+    "pretraining_metadata_keys": [],
+    "note": "State-key/shape compatibility only; no historical prediction or input authentication."
+  },
+  {
+    "model": "S7",
+    "seed": 42,
+    "stream": "ema_model",
+    "state_entries": 468,
+    "keys_and_shapes_match": true,
+    "checkpoint_sha256": "441b42f6718fc3fdbb5fe4c5426dbeb13bcdd10242a6c743195f3489b481252c",
+    "pretraining_metadata_keys": [],
+    "note": "State-key/shape compatibility only; no historical prediction or input authentication."
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-07",
+  "common_gflops_reprofiled_and_matches_per_operator_records": true,
+  "six_models_same_cpu_protocol": true,
+  "independent_process_repetitions": 5,
+  "warmups_per_repetition": 50,
+  "timed_forwards_per_repetition": 200,
+  "raw_total_observations": 6000,
+  "latency_sd_definition": "sample SD of five repetition means",
+  "statistics_recomputed_from_raw_observations": true,
+  "classification_scores_unchanged": true,
+  "complete_external_table_in_response_and_changes_both_languages": true,
+  "seven_paired_contrasts_inline_reviewer5_comment5_and_reviewer6_comment1": true,
+  "all_detached_response_tables_moved_inline": true,
+  "all_reviewer_original_quotes_preserved": true,
+  "response_black_changes_blue_body_red": true
+}

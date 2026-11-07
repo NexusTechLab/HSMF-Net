@@ -1,0 +1,8 @@
+{
+  "manifest_sha256": "9d0d937f3aeef945f99cd4a016983270001bd4c94c296ea9475370d77c6c067e",
+  "source_sha256": "beeaee76abe55c1229719e02d5f938a82bbf228057c0e45ed0b03b22cc800b10",
+  "script_sha256": "602cd490d4405455e63889a8a0d8344218e5dddda5fae273749fdc58f8034b5e",
+  "numpy": "2.3.4",
+  "python": "3.12.11 | packaged by Anaconda, Inc. | (main, Jun  5 2025, 12:58:53) [MSC v.1929 64 bit (AMD64)]",
+  "linear_algebra_threads": 1
+}

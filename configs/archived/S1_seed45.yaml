@@ -1,0 +1,87 @@
+seed: 45
+device: auto
+output_dir: F:\00 Paper-Summary\1.HSMF-Net-Paper\01-Experiments\MobileNet_Ablation_Code-V3\artifacts\sci_s1s8_tvt701515_5seed_v2_2026-09-22
+experiment_name: sci_s1_rgb_baseline_seed45
+model:
+  name: v3
+  num_classes: 4
+  width_mult: 1.0
+  dropout: 0.2
+  input_channels: 3
+  variant: v3_small
+pretrained:
+  enabled: true
+  source: torchvision
+data:
+  name: wheat_seed
+  root: data/wheat-seed
+  image_size: 224
+  batch_size: 16
+  num_workers: 4
+  pin_memory: true
+  persistent_workers: true
+  prefetch_factor: 4
+  randaugment: true
+  randaugment_num_ops: 2
+  randaugment_magnitude: 9
+  random_erasing_p: 0.25
+  val_ratio: 0.15
+  test_ratio: 0.15
+  split_seed: 42
+  exclude_classes:
+  - XN9112
+  sampler:
+    class_balanced: true
+    class_balance_power: 1.0
+    target_classes:
+    - ZM379
+    target_multiplier: 1.6
+    replacement: true
+train:
+  epochs: 100
+  amp: true
+  deterministic: false
+  save_every: 5
+  label_smoothing: 0.05
+  early_stopping_patience: 18
+  warmup_epochs: 10
+  ema_enabled: true
+  ema_decay: 0.999
+  ema_tau: 2000
+  ema_eval_start_epoch: 15
+  ema_eval_min_updates: 1500
+  ema_eval_after_warmup_epochs: 3
+  ema_switch_max_drop: 0.01
+  loss_name: focal
+  focal_gamma: 1.5
+  grad_clip_norm: 1.0
+  abort_on_non_finite: false
+  class_weighting_enabled: true
+  class_weight_power: 1.0
+  class_weight_target_boost:
+    ZM379: 1.4
+  early_stopping_min_epoch: 100
+  mixup_alpha: 0.1
+  mixup_prob: 0.5
+  smoke_monitor:
+    enabled: true
+    start_epoch: 1
+    majority_ratio_threshold: 0.8
+    majority_only_threshold: 0.98
+    entropy_threshold: 0.45
+    abort_on_collapse: true
+optimizer:
+  name: adamw
+  lr: 0.0005
+  weight_decay: 0.0008
+scheduler:
+  name: cosine
+  t_max: 100
+  eta_min: 5e-6
+logging:
+  log_interval: 50
+  tensorboard: true
+  show_progress_bar: true
+  show_batch_log: false
+eval:
+  checkpoint_preference: best

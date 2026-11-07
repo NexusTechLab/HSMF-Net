@@ -1,0 +1,50 @@
+{
+  "status": "PLANNED_NOT_EXECUTED",
+  "scope": "S1-S8 CPU forward-only timing; no retraining",
+  "models": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "S7",
+    "S8"
+  ],
+  "batch_size": 1,
+  "dtype": "float32",
+  "memory_layout": "standard contiguous; no channels-last conversion",
+  "cpu_threads": 14,
+  "interop_threads": 14,
+  "thread_settings_application": "set explicitly once in each fresh benchmark process before work",
+  "power_scheme": "Balanced, current recorded plan; verify unchanged for each repetition",
+  "cpu_affinity": "all 20 logical processors eligible; no physical-core-only claim",
+  "warmup_for_each_model_in_each_repetition": 50,
+  "timed_forwards_per_repetition": 500,
+  "fresh_process_repetitions": 5,
+  "timing": "model.eval(), torch.inference_mode(), time.perf_counter()",
+  "inputs": "fixed prepared CPU tensors at the archived input shapes; fixed random seed 42; record checkpoint path/hash and selection stream before timing",
+  "weights": "prespecified checkpoint and stream; no test-performance-based main/EMA choice",
+  "included": "model(*inputs) only; no GPU device transfers in timed interval",
+  "excluded": [
+    "acquisition",
+    "file decoding/loading",
+    "RGB resizing",
+    "HSI preprocessing",
+    "spectral selection",
+    "tensor creation",
+    "device transfer",
+    "softmax/argmax outside forward",
+    "sorting-system execution"
+  ],
+  "planned_outputs": [
+    "all 2500 individual latency observations per model with repetition IDs",
+    "per-repetition mean/sample SD/min/median/P95",
+    "pooled descriptive mean/sample SD/min/median/P95",
+    "SD of five repetition means separately"
+  ],
+  "quantile_method": "linear interpolation, explicitly recorded",
+  "model_order": "fixed reproducibly randomized order per repetition",
+  "system_load": "perform during a quiet period; log concurrent load; do not terminate existing jobs",
+  "no_new_measurement_claim": true
+}

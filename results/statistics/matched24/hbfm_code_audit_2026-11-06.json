@@ -1,0 +1,208 @@
+{
+  "date": "2026-11-06",
+  "scope": "Source hashes, configuration equality, seeded initialization, synthetic eval forward, and saved EMA weight/log diagnostics; no real-input re-inference and no causal mechanism experiment.",
+  "runtime": {
+    "torch": "2.9.0+cu128",
+    "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]"
+  },
+  "source_checks": {
+    "scripts/reviewer6_support.py": {
+      "current_sha256": "f091afcf7aae13baff2171692813ca944df8f0bb4b72afdd69aa4d169483f1fd",
+      "recorded_sha256": "f091afcf7aae13baff2171692813ca944df8f0bb4b72afdd69aa4d169483f1fd",
+      "matches": true
+    },
+    "scripts/run_reviewer6_controls.py": {
+      "current_sha256": "43d8f7eb4ed2800695d1f5fbef0f6339cc8399d2d579e009eb1f4e9067b13d9e",
+      "recorded_sha256": "43d8f7eb4ed2800695d1f5fbef0f6339cc8399d2d579e009eb1f4e9067b13d9e",
+      "matches": true
+    },
+    "src/mobilenet_enterprise/models/fusion/rgb_hsi_mid_film.py": {
+      "current_sha256": "b579ce643ed01e1498c77343e276ecda396480cae58def73ae042a7e2e94c100",
+      "recorded_sha256": "b579ce643ed01e1498c77343e276ecda396480cae58def73ae042a7e2e94c100",
+      "matches": true
+    },
+    "src/mobilenet_enterprise/models/fusion/spatial_film.py": {
+      "current_sha256": "caa9310245347233971ddf20725b58e25079643b7810568caf67dcc13d0f5897",
+      "recorded_sha256": "caa9310245347233971ddf20725b58e25079643b7810568caf67dcc13d0f5897",
+      "matches": true
+    },
+    "src/mobilenet_enterprise/data/wheat_seed_fusion.py": {
+      "current_sha256": "b24342d7155de78a6202a9e963377c7a61ea81e3f4c2c4ed92e842f37b43b4fb",
+      "recorded_sha256": "b24342d7155de78a6202a9e963377c7a61ea81e3f4c2c4ed92e842f37b43b4fb",
+      "matches": true
+    },
+    "src/mobilenet_enterprise/engine/trainer.py": {
+      "current_sha256": "7f793ff16a0eda217e525ea11025723a651b1ab7424aa446f89ca887407c3b56",
+      "recorded_sha256": "7f793ff16a0eda217e525ea11025723a651b1ab7424aa446f89ca887407c3b56",
+      "matches": true
+    }
+  },
+  "seeds": [
+    {
+      "seed": 42,
+      "shared_initial_state_identical": true,
+      "initial_eval_features_identical": true,
+      "feature_shape": [
+        2,
+        272
+      ],
+      "initial_max_absolute_error": 0.0,
+      "full_minus_none_correct": -4,
+      "records": {
+        "full24": {
+          "parameters": 2659402,
+          "best_epoch": 50,
+          "accuracy_pct": 95.96491228070175,
+          "generator_final_weight_norms": {
+            "mid_film.hsi_to_rgb.3.weight": 2.822981595993042,
+            "mid_film.rgb_to_hsi.3.weight": 1.763108253479004,
+            "late_film.hsi_to_rgb.3.weight": 3.733071804046631,
+            "late_film.rgb_to_hsi.3.weight": 3.308565139770508
+          },
+          "checkpoint_sha256": "c4831f269806b7fd71834c8503c32576e67b88f544bc41f952aba64e09184cb2"
+        },
+        "no_modulation24": {
+          "parameters": 2615594,
+          "best_epoch": 78,
+          "accuracy_pct": 96.66666666666667,
+          "generator_final_weight_norms": {},
+          "checkpoint_sha256": "25db1da5e395912fb2b2a66519683b6cb96b779c7641e2a7a72e364604d2fead"
+        }
+      }
+    },
+    {
+      "seed": 43,
+      "shared_initial_state_identical": true,
+      "initial_eval_features_identical": true,
+      "feature_shape": [
+        2,
+        272
+      ],
+      "initial_max_absolute_error": 0.0,
+      "full_minus_none_correct": -3,
+      "records": {
+        "full24": {
+          "parameters": 2659402,
+          "best_epoch": 72,
+          "accuracy_pct": 95.78947368421052,
+          "generator_final_weight_norms": {
+            "mid_film.hsi_to_rgb.3.weight": 2.9737439155578613,
+            "mid_film.rgb_to_hsi.3.weight": 2.121255397796631,
+            "late_film.hsi_to_rgb.3.weight": 4.155008316040039,
+            "late_film.rgb_to_hsi.3.weight": 3.8137624263763428
+          },
+          "checkpoint_sha256": "d415242641391032468f93c982603375257f868db496d3f65f2562e6fb9dfda0"
+        },
+        "no_modulation24": {
+          "parameters": 2615594,
+          "best_epoch": 83,
+          "accuracy_pct": 96.3157894736842,
+          "generator_final_weight_norms": {},
+          "checkpoint_sha256": "b046f027484ddcf0c7a00a52b0cd521bdcd9b2e1fd98b2de7df9abd3cdc7e2ad"
+        }
+      }
+    },
+    {
+      "seed": 44,
+      "shared_initial_state_identical": true,
+      "initial_eval_features_identical": true,
+      "feature_shape": [
+        2,
+        272
+      ],
+      "initial_max_absolute_error": 0.0,
+      "full_minus_none_correct": -14,
+      "records": {
+        "full24": {
+          "parameters": 2659402,
+          "best_epoch": 55,
+          "accuracy_pct": 94.21052631578948,
+          "generator_final_weight_norms": {
+            "mid_film.hsi_to_rgb.3.weight": 3.369248867034912,
+            "mid_film.rgb_to_hsi.3.weight": 1.5772069692611694,
+            "late_film.hsi_to_rgb.3.weight": 4.039884090423584,
+            "late_film.rgb_to_hsi.3.weight": 3.518742084503174
+          },
+          "checkpoint_sha256": "bbcb3927be24805c2903efbe854f7fc4df9be70ccb874b0324a0163ea5855fa6"
+        },
+        "no_modulation24": {
+          "parameters": 2615594,
+          "best_epoch": 72,
+          "accuracy_pct": 96.66666666666667,
+          "generator_final_weight_norms": {},
+          "checkpoint_sha256": "28df5867e03530e9c6fb12eaec9b8f803ab8f16e5266f53f6ea27d92a7c5f900"
+        }
+      }
+    },
+    {
+      "seed": 45,
+      "shared_initial_state_identical": true,
+      "initial_eval_features_identical": true,
+      "feature_shape": [
+        2,
+        272
+      ],
+      "initial_max_absolute_error": 0.0,
+      "full_minus_none_correct": -12,
+      "records": {
+        "full24": {
+          "parameters": 2659402,
+          "best_epoch": 68,
+          "accuracy_pct": 95.26315789473684,
+          "generator_final_weight_norms": {
+            "mid_film.hsi_to_rgb.3.weight": 3.0145630836486816,
+            "mid_film.rgb_to_hsi.3.weight": 2.163337230682373,
+            "late_film.hsi_to_rgb.3.weight": 3.9334189891815186,
+            "late_film.rgb_to_hsi.3.weight": 3.91774320602417
+          },
+          "checkpoint_sha256": "5b931b80d5a21ac3425187fa6ac99fe7aa4402dd4b58774563157271c82a52e7"
+        },
+        "no_modulation24": {
+          "parameters": 2615594,
+          "best_epoch": 76,
+          "accuracy_pct": 97.36842105263158,
+          "generator_final_weight_norms": {},
+          "checkpoint_sha256": "39785f08b5b10dcf2e390fbd89d2da4d433fe12250f1d8f754596c0e766b360a"
+        }
+      }
+    },
+    {
+      "seed": 46,
+      "shared_initial_state_identical": true,
+      "initial_eval_features_identical": true,
+      "feature_shape": [
+        2,
+        272
+      ],
+      "initial_max_absolute_error": 0.0,
+      "full_minus_none_correct": 4,
+      "records": {
+        "full24": {
+          "parameters": 2659402,
+          "best_epoch": 82,
+          "accuracy_pct": 96.84210526315789,
+          "generator_final_weight_norms": {
+            "mid_film.hsi_to_rgb.3.weight": 3.0309953689575195,
+            "mid_film.rgb_to_hsi.3.weight": 1.7903804779052734,
+            "late_film.hsi_to_rgb.3.weight": 4.244924068450928,
+            "late_film.rgb_to_hsi.3.weight": 4.023383617401123
+          },
+          "checkpoint_sha256": "75a016e3f2e1f8af0d98747710842d4b30b8d3f4da923bb8c4988ab8f534c9a8"
+        },
+        "no_modulation24": {
+          "parameters": 2615594,
+          "best_epoch": 66,
+          "accuracy_pct": 96.14035087719299,
+          "generator_final_weight_norms": {},
+          "checkpoint_sha256": "92f2ee829606c451add704482bf750c45360e288d866129a1d990e9ed18562ec"
+        }
+      }
+    }
+  ],
+  "interpretation_limits": [
+    "Nonzero generator weights do not measure gate amplitudes on actual inputs.",
+    "Identical initial eval mappings do not imply identical stochastic training trajectories.",
+    "Potential optimization, generalization and spatial-correspondence explanations are hypotheses, not established causes.",
+    "These current-study checks do not authenticate historical S8 inputs or test weight stream."
+  ]
+}

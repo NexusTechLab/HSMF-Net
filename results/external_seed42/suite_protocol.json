@@ -1,0 +1,324 @@
+{
+  "schema": 1,
+  "reference_config": "F:\\00 Paper-Summary\\1.HSMF-Net-Paper\\01-Experiments\\MobileNet_Ablation_Code-V3\\artifacts\\reviewer6_spa_uniform24_hsi_rgb\\configs\\refitted_spa24_seed42.yaml",
+  "reference_sha256": "e82877636d8acc13def7d4bc7a3c22516efe135a09f5c720978a76e3993d6bcd",
+  "manifest_sha256": "d62bf92af344d1f1a47e8b684ce0fd9239aae299ce277410e6a01e9cd7055f92",
+  "ordered_test_identity_sha256": "3a0bad53c27b3d0ffa6d59a897e73eac040429988e5fe27051e7828b2b966b42",
+  "spa24_sha256": "e7296d2424d1abc14f98c4898c6c5aabe0ca2b6e059f7e732abad32c55cc8ecc",
+  "spa_indices": [
+    10,
+    12,
+    22,
+    27,
+    32,
+    35,
+    59,
+    104,
+    116,
+    144,
+    164,
+    168,
+    193,
+    208,
+    213,
+    245,
+    264,
+    283,
+    294,
+    319,
+    357,
+    401,
+    430,
+    438
+  ],
+  "normalization_sha256": "6eb63db409a973fa602e400209c03e7412d1abe39c88f96f63a4839a1e72b18a",
+  "source_hashes": {
+    "scripts/reviewer6_support.py": "f091afcf7aae13baff2171692813ca944df8f0bb4b72afdd69aa4d169483f1fd",
+    "scripts/run_external_baselines.py": "7a39f14fe0fc7f7db874776af36b76d7eb6cd8c1897b45b10e75c365c4ceea9a",
+    "src/mobilenet_enterprise/__init__.py": "c8550c859b1952bc47e5d4d32840c6e4d2ef1768ac010c4a1359e5ba023c28a1",
+    "src/mobilenet_enterprise/data/__init__.py": "cbdcb049d1ef5d511e0328262d6076ab3c299c9b2df082334605ea15dc8ad7eb",
+    "src/mobilenet_enterprise/data/registry.py": "dd77aae3c47054f52741c49d1e15f19c38ebd7948a1fabc60fd77de4d530a869",
+    "src/mobilenet_enterprise/data/wheat_seed.py": "1e4f8c1d907d303f0594b1b241143e057f1818354b7d25c1639a50bbee9ebf4e",
+    "src/mobilenet_enterprise/data/wheat_seed_fusion.py": "b24342d7155de78a6202a9e963377c7a61ea81e3f4c2c4ed92e842f37b43b4fb",
+    "src/mobilenet_enterprise/data/wheat_seed_hsi.py": "beeaee76abe55c1229719e02d5f938a82bbf228057c0e45ed0b03b22cc800b10",
+    "src/mobilenet_enterprise/engine/__init__.py": "07d2345a0084eee077789e173d57d78ad878d30c095063e203082f0646be45d5",
+    "src/mobilenet_enterprise/engine/evaluator.py": "87bcb74583a992a43248af32e209d087b9da57c979346e5f33e488e46389c5c3",
+    "src/mobilenet_enterprise/engine/trainer.py": "7f793ff16a0eda217e525ea11025723a651b1ab7424aa446f89ca887407c3b56",
+    "src/mobilenet_enterprise/models/__init__.py": "da12a2f65e95362ca0956e39a9176984ed1aaa4a7efcbbe1b1c7ebd9d88d3736",
+    "src/mobilenet_enterprise/models/base.py": "eb084bf85d417985366976a245b131b7cd82533ba791a46ff3f87086d3c09863",
+    "src/mobilenet_enterprise/models/blocks.py": "d3bd8d6333dbaa89884a9beb7171da45d835faa089707706d7c66f6af889000d",
+    "src/mobilenet_enterprise/models/external/__init__.py": "18f1997c6084738f154e36c9edd9332765b9d5bdcfb580ff2016da125938407d",
+    "src/mobilenet_enterprise/models/external/_cloln_author.py": "5192a2b817d0648420071d73f0c680a57a3566855b878ed82a3425d4eed57a71",
+    "src/mobilenet_enterprise/models/external/_convsst_author.py": "4bb07a71ba71c0bb8261855e6e0866227770d1d8971101306a64c550e640ad9b",
+    "src/mobilenet_enterprise/models/external/_mft_author.py": "0c6542655d7eea51fc8f9ed25ddf7709257f6b7f53bbc1a6106410c99ba17154",
+    "src/mobilenet_enterprise/models/external/_resnet_rh_author.py": "b48446d7b3fb71690222f58fc393126c2390c0aad63ac10dd85bfecdb339d21c",
+    "src/mobilenet_enterprise/models/external/baselines.py": "b55adf0f87a01aa8bc2c7cd481318b8fcb7a8d0c77c6184a901a58fba91d8887",
+    "src/mobilenet_enterprise/models/fusion/__init__.py": "a282451ca9074ec66b0cfdde9dd0b96ba997f5336b54bfc68a200e328a1e9363",
+    "src/mobilenet_enterprise/models/fusion/attention.py": "d858c1b4a6c7af0ae0633f67f174c5d0d13ce108d04eb548be7d0174199ea826",
+    "src/mobilenet_enterprise/models/fusion/rgb_hsi_fusion.py": "c85442575bed303381aa4fbb25eb02c580080ca2dabcfb752d064a04cbd1bacc",
+    "src/mobilenet_enterprise/models/fusion/rgb_hsi_mid_film.py": "b579ce643ed01e1498c77343e276ecda396480cae58def73ae042a7e2e94c100",
+    "src/mobilenet_enterprise/models/fusion/spatial_film.py": "caa9310245347233971ddf20725b58e25079643b7810568caf67dcc13d0f5897",
+    "src/mobilenet_enterprise/models/three_d/__init__.py": "d581356047bea1a1338a3f2c396b2ecbd1e345dc3156bfce838a091511cc70ef",
+    "src/mobilenet_enterprise/models/three_d/hybridsn.py": "63625fab748c9c688383bc1159a999d188d95525911bf7f3363ebd44aa18de6a",
+    "src/mobilenet_enterprise/models/three_d/mobilenet3d_v3.py": "2607e822db5fb869abbcb597a3072f7f31a5f6da1439a88696ba5cd9fb9026bd",
+    "src/mobilenet_enterprise/models/three_d/mobilenet_v3_pure3d.py": "787357ce02659b77686682c56f4b39a8359b36dab25b7b7e0a6c23570de5901c",
+    "src/mobilenet_enterprise/models/three_d/pure3d.py": "32d3d4bb85b4843cac88a7d38d7362e75b2d0948b0991645f4fece5dab598403",
+    "src/mobilenet_enterprise/models/three_d/spectral_compressor.py": "76ff93f30679038fa72b053e4891da09060595c78fa255efe56349750521822f",
+    "src/mobilenet_enterprise/models/three_d/stem_blocks.py": "4f64197eef42a1d3e3faf572345eb87918faac50a93fc9e15f68f3b3d68eb0aa",
+    "src/mobilenet_enterprise/models/two_d/__init__.py": "7fad39cd43b965328a1edcc0e65f1f81a4d61a0a667e87d0fdf3705998862ca2",
+    "src/mobilenet_enterprise/models/two_d/mobilenet_v3.py": "787ce531b8d14f079b114e16ad6f451ded9ee68874c25ff1b9d8e9f0221149de",
+    "src/mobilenet_enterprise/registry.py": "3328348b888e8fbe63ef5ba59a4281a8daa650e619c3dc92a46fd366e5bc7ef3",
+    "src/mobilenet_enterprise/utils/__init__.py": "0088c278c44eb265458efdc2f662577732180d12813b222c5a74214a1d09e4af",
+    "src/mobilenet_enterprise/utils/checkpoint.py": "2639f039c4c5978a49439a2dca2363766cf6bad094e137f11c3a5010f282f97d",
+    "src/mobilenet_enterprise/utils/config.py": "769b92ceb3d8073f39452d22e9a089f710fd6e99e37398e8461d6b74a11239b1",
+    "src/mobilenet_enterprise/utils/network_diagram.py": "7c31c420a328d95b3970233cb20f371098b33768727e75d79bf30c8202e6f3b1",
+    "src/mobilenet_enterprise/utils/network_structure.py": "f7ffaed67e70bfae23d70a22fa69ff35408c47fd9fa00d531bd95217b193f9e8",
+    "src/mobilenet_enterprise/utils/pretrained.py": "a13000739cbbef9aafbdcfc6bd95eb1dbd0891bb55ab6be71bc5061f9dc2d430",
+    "src/mobilenet_enterprise/utils/runtime.py": "241b98f53a7077a29896bdfe0580310a3ca2c2535721fd98973826c28b9bed54",
+    "src/mobilenet_enterprise/visualization/__init__.py": "04c87a931bc1cea1a3a284157b508bd1467a64731c73702b9e3227f817ea4b7f",
+    "src/mobilenet_enterprise/visualization/metrics_viz.py": "b7225064c1576cb00465d63b682d2569ce6a442598d51f79372c864fe55c5dee"
+  },
+  "models": {
+    "cloln": {
+      "year": 2024,
+      "modalities": "HSI",
+      "source": "cloln",
+      "label": "CLOLN (input-adapted)",
+      "doi": "10.1109/TGRS.2024.3350055",
+      "adaptation": "Author PyTorch classes; 24 input bands, four classes, same 24x24 object crop; original dropout 0.4 retained.",
+      "upstream": {
+        "repository": "AchunLee/CLOLN_TGRS",
+        "commit": "cca440d92acb95d3ed6731b056765ee76618ea87",
+        "retrieved": "2026-11-05",
+        "files": [
+          {
+            "path": "CLOLN_demo.ipynb",
+            "sha256": "efb8f145ed730581c941d36a50f11b718b201601be3beec9e4d236fd91699cef"
+          },
+          {
+            "path": "README.md",
+            "sha256": "e958884eb39c410c6773cbdf5633bb537316c5ed02a6db1e183c4279120c19a8"
+          },
+          {
+            "path": "Res_LS2CM_demo.ipynb",
+            "sha256": "3c2f86ecb84d6a3525e1cad94d58a5628b8043b8e8a12702a77131e13a13c9d0"
+          },
+          {
+            "path": "ghost_hsi_demo.ipynb",
+            "sha256": "57ce8ced32fca19b8bfc7a68c681ea0f025fc16f54b743b26ba9a2c6f33a918e"
+          }
+        ]
+      }
+    },
+    "mixersenet": {
+      "year": 2025,
+      "modalities": "HSI",
+      "source": "mixersenet",
+      "label": "MixerSENet (PyTorch port)",
+      "doi": "10.1109/LGRS.2025.3616338",
+      "adaptation": "Keras architecture port; depth=5, filters=64, SE ratio=8; Keras BN epsilon/momentum/biased running variance and exact GELU retained; softmax removed for logits loss; common training replaces original Adam recipe.",
+      "upstream": {
+        "repository": "mqalkhatib/MixerSENet",
+        "commit": "ca19012227c35fa544bb440b795061410ba44db9",
+        "retrieved": "2026-11-05",
+        "files": [
+          {
+            "path": "README.md",
+            "sha256": "be4a49b2ce958e72540d16a4afe2cb47e35fbf443701e377ae46b0089d8ef136"
+          },
+          {
+            "path": "main_MixerSE.py",
+            "sha256": "67ef6f4be6318fb070aac4c49fe7c0e7b7ec0c7377fcae3d2e112cf475bdea29"
+          },
+          {
+            "path": "model_Mixer.py",
+            "sha256": "9d35a8a5f735eb2c2a41ae3b2b75b4755676cfa4023cb762edfab7dd98f584e2"
+          }
+        ]
+      }
+    },
+    "convsst": {
+      "year": 2024,
+      "modalities": "HSI",
+      "source": "convsst",
+      "label": "3D-ConvSST (input-adapted)",
+      "doi": "10.48550/arXiv.2404.13252",
+      "adaptation": "Author PyTorch classes; native 11x11 positional grid/reshape/pooling expanded to 24x24; 24 bands and four classes; embedding=64, depth=2, heads=8 as author training cell.",
+      "upstream": {
+        "repository": "ShyamVarahagiri/3D-ConvSST",
+        "commit": "ecbf9963a03886a5be499120415cd2d66a2478ac",
+        "retrieved": "2026-11-05",
+        "files": [
+          {
+            "path": "3D-ConvSST.ipynb",
+            "sha256": "0e7a44cb677f1c9324e5b804eccdbd98ed9c4944bd9c54d2fa5317981135449a"
+          },
+          {
+            "path": "README.md",
+            "sha256": "471461c89d8b9574a4cd1b3b23a5213a886d89b2e900fe9328c3924d2a726d1a"
+          },
+          {
+            "path": "auxil.py",
+            "sha256": "f7aa744f2dc1b762c26dd9739cf0681c29d641aa9a96c618685da4eb4e322c35"
+          },
+          {
+            "path": "record.py",
+            "sha256": "ce57d17951350ab4751d31fd755d07e3a24542144692217c990a51802e0343a7"
+          }
+        ]
+      }
+    },
+    "resnet_rh": {
+      "year": 2024,
+      "modalities": "RGB+HSI mean spectrum",
+      "source": "resnet_rh",
+      "label": "ResNet-R&H (SPA24-adapted)",
+      "doi": "10.1038/s41598-024-51668-6",
+      "adaptation": "Author four-channel 3x3-stem ResNet18; mean of standardized nonzero HSI foreground; SPA24 vector reshaped 4x6 and bilinearly expanded to 24x24, RGB resized to 24x24; adaptive final pooling; removes author debug print/exit; correct channel ordering; common SPA/normalization replaces original MSC. Substantial input adaptation, not an exact reproduction.",
+      "upstream": {
+        "repository": "HZSUZJ/DLDF",
+        "commit": "cebfd513618598584c79a43c4964bed9a251e84b",
+        "retrieved": "2026-11-05",
+        "files": [
+          {
+            "path": "HyperspectrumAndImages/AdaBoost.py",
+            "sha256": "a65017b0abf0be6dc56b4bd9f0572699bb23acbcb8ff1caecbd7f623b85159e0"
+          },
+          {
+            "path": "HyperspectrumAndImages/DecisionTree.py",
+            "sha256": "712e129115f7543a9ac209baff8347d3337f582c6cc2b41fc578220abe7f5452"
+          },
+          {
+            "path": "HyperspectrumAndImages/RandomForests.py",
+            "sha256": "50268d547a8cdc7ad25747a0222dcca8b7be30756204e783a2ed8bfa2259853a"
+          },
+          {
+            "path": "HyperspectrumAndImages/knn.py",
+            "sha256": "51437727ea97023cb15bc34aa33ac08c4ec9fe68886e22d3bde792d2e35f958f"
+          },
+          {
+            "path": "HyperspectrumAndImages/resnet18xxd.py",
+            "sha256": "352be8de4d8cf413dca26cd7510efb0807c7956adcfaa6758a64715dc2032ad6"
+          },
+          {
+            "path": "README.md",
+            "sha256": "984105701e39c9e5faf646ab341f2663fa28ae96583fa8bbd9c13bf848c540ef"
+          },
+          {
+            "path": "btgen.py",
+            "sha256": "4586610322fab4274b2462a6b08d0f49389bfa428443a02f2993d04c42a63b06"
+          },
+          {
+            "path": "main1.py",
+            "sha256": "b89c2174d6f7982b55be826fb5d17b1ef1b7ca3c6cce3c452c4a33b95aa09640"
+          },
+          {
+            "path": "model1.py",
+            "sha256": "4fe81d69db1d94fd1cc2e4b7d5b1f4d9cfcc8851454f49ad233f9f9279afb4b4"
+          },
+          {
+            "path": "noHyperspectral/AdaBoost.py",
+            "sha256": "c433ee86ab5f0907da0ab9a1bf653470d12548d1e75aad84ab45677c4b2630cc"
+          },
+          {
+            "path": "noHyperspectral/DecisionTree.py",
+            "sha256": "b1b78bfd677a20755cbb5b2327528b69da85bbede0afb660aac0f67476c0f4ed"
+          },
+          {
+            "path": "noHyperspectral/RandomForests.py",
+            "sha256": "421fc59e8cc3de1a1abeae703b6e935d38528a3529340a912d6c6360e3578945"
+          },
+          {
+            "path": "noHyperspectral/knn.py",
+            "sha256": "5442ed3d07e3567e3ad7066f1c864d994f678b91b0d998d55df8da637d2c27be"
+          },
+          {
+            "path": "noHyperspectral/resnet18xxd.py",
+            "sha256": "7200e18a2f91b772a6891f0dc9cf6ccd04530aa2c04aacd2f96fc3be6bbcfd05"
+          },
+          {
+            "path": "noImage/AdaBoost.py",
+            "sha256": "e49740d80e861144a5fda01ed4402086ac0af28a639dfeea7455efe4f3fbd8fe"
+          },
+          {
+            "path": "noImage/DecisionTree.py",
+            "sha256": "6d354f728e3b656412bd5f47c1b99f7fad3f253e440c1be38e779948ec725d19"
+          },
+          {
+            "path": "noImage/RandomForests.py",
+            "sha256": "b09fe1ab2f31cd0847cbc30557488647d66b3fd31afb97e1eac9e436e5daace1"
+          },
+          {
+            "path": "noImage/knn.py",
+            "sha256": "20319e0d33c7a3ecab852f460e0a5ed4c1f001d49c32d477d078357ed9060054"
+          },
+          {
+            "path": "noImage/resnet18xxd.py",
+            "sha256": "65c0811f70e8a0cc9065aae4410f0a70d64052610a627c0636fabadf12b0d980"
+          },
+          {
+            "path": "pred.py",
+            "sha256": "e74d754079f9737f7693814f361f5ba18a1bcd39ae4e87382f100bb2a78f5dd2"
+          }
+        ]
+      }
+    },
+    "mft": {
+      "year": 2023,
+      "modalities": "RGB+HSI",
+      "source": "mft",
+      "label": "MFT (RGB-HSI adapted)",
+      "doi": "10.1109/TGRS.2023.3286826",
+      "adaptation": "Author MFT classes, FM=16, 24 bands, four classes; auxiliary input changed to three RGB channels and RGB resized 224->24; patchsize=24 instead of 11. Legacy attention baseline, outside 2024-2026 window.",
+      "upstream": {
+        "repository": "AnkurDeria/MFT",
+        "commit": "de214e512ff1a8f6aefdf27fc2cb60c75e0f559a",
+        "retrieved": "2026-11-05",
+        "files": [
+          {
+            "path": "README.md",
+            "sha256": "41cbbc1328258b2e2b3dca210a17f04b5fbf81f29468380ec6a0275bf487d1b9"
+          },
+          {
+            "path": "record.py",
+            "sha256": "a86504c5f9a5988da0186ae80e1e5794de90090822315388567bde3e2b089364"
+          },
+          {
+            "path": "Model/MFT.ipynb",
+            "sha256": "3c58c429ba471ed6e69883bbca1171d1b7ddd70864fda9f2f6e0ec70e50615ea"
+          }
+        ]
+      }
+    },
+    "hsmf": {
+      "year": null,
+      "modalities": "RGB+HSI",
+      "source": null,
+      "label": "HSMF-Net (matched protocol, scratch)",
+      "doi": null,
+      "adaptation": "Current author architecture; rerun with same preprocessing and training budget, from scratch like external models; historical pretrained results stay separate."
+    }
+  },
+  "seeds": [
+    42
+  ],
+  "methods": [
+    "cloln",
+    "mixersenet",
+    "convsst",
+    "resnet_rh",
+    "mft",
+    "hsmf"
+  ],
+  "training": "Reference training/optimizer/scheduler/augmentation settings unchanged; all models start from scratch including matched HSMF comparator.",
+  "selection": "First maximum validation accuracy; recorded EMA/main stream; test only after training completes.",
+  "split": "Frozen paired 2660/570/570; split seed42 is independent of training seeds.",
+  "preprocessing": "Byte-identical prior SPA24 indices and normalization statistics, identical loader implementation; suite-owned cache copy.",
+  "rgb_policy": "<rgb_root>/<cultivar>/hsi/; same-stem HSI-directory image exports (legacy input)",
+  "pairing_limitation": "matching cultivar and unique filename stem; physical pairing requires author confirmation",
+  "latency_iters": 200,
+  "excluded_candidates": {
+    "pyformer": "Official multi-axis attention over WS*WS*k positions and full-width 3D kernels is costly at matched 24x24x24; replaced with author PyTorch 3D-ConvSST (2024).",
+    "ssft": "Official author implementation not verified; not represented by a custom architecture."
+  }
+}

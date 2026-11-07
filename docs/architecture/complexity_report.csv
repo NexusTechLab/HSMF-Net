@@ -1,0 +1,3 @@
+model,rgb_input_shape,hsi_input_shape,registered_parameters,declared_trainable_parameters,registered_frozen_parameters,executed_path_parameters,bypassed_head_parameters,conv_linear_only_GMACs,THOP_count_G,THOP_version,scope
+S8,"[1, 3, 224, 224]","[1, 1, 24, 24, 24]",2659402,2659402,0,1952898,706504,0.317935008,0.329383552,2.1.6,CPU synthetic-input structural audit; not full FLOPs or historical runtime authentication
+S7,"[1, 3, 224, 224]","[1, 1, 50, 24, 24]",2659402,2659402,0,1952898,706504,0.531792288,0.546595456,2.1.6,CPU synthetic-input structural audit; not full FLOPs or historical runtime authentication

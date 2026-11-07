@@ -1,0 +1,22 @@
+{
+  "parameters": 52044,
+  "params_m": 0.052044,
+  "gflops": 0.055962112,
+  "macs_by_operator": {
+    "conv": 27979776,
+    "linear": 1280
+  },
+  "flops_convention": "2 FLOPs per MAC; convolution, linear, einsum, matmul only; excludes norm, activations, resize and pointwise ops",
+  "unsupported_ops": {
+    "aten::gelu": 6,
+    "aten::add": 20,
+    "aten::mean": 2,
+    "aten::sigmoid": 1,
+    "aten::mul": 1
+  },
+  "latency_ms_mean": 6.07580512791872,
+  "latency_ms_sd": 4.518257991195717,
+  "latency_ms_p50": 3.1796159744262695,
+  "latency_ms_p95": 12.036042070388794,
+  "latency_scope": "FP32 eval/inference_mode, batch1; includes model input adapters, excludes file I/O and CPU preprocessing/transfers"
+}

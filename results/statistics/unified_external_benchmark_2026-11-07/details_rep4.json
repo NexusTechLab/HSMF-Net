@@ -1,0 +1,94 @@
+[
+  {
+    "method": "hsmf",
+    "repetition": 4,
+    "params_m": 2.659402,
+    "gflops": 0.635870016,
+    "macs_by_operator": {
+      "conv": 317882016.0,
+      "linear": 52992.0
+    },
+    "mean_ms": 23.5772515,
+    "iteration_sd_ms": 4.638709202366359,
+    "checkpoint": "F:\\Obsidian\\SCI\u8bba\u6587-\u4ed3\u5e93\\\u7b2c\u4e00\u7bc7SCI\u8bba\u6587\\5.\u8bba\u6587\u6846\u67b6--INF-Response\\HSMF-Net\\checkpoints\\reference\\S8_seed42.pt",
+    "checkpoint_sha256": "f3eb3615b7d3f2db39facd7958b81be8c70e35b169b4fcbaf720e34c13ea9bc1",
+    "stream": "model"
+  },
+  {
+    "method": "mixersenet",
+    "repetition": 4,
+    "params_m": 0.052044,
+    "gflops": 0.055962112,
+    "macs_by_operator": {
+      "conv": 27979776.0,
+      "linear": 1280.0
+    },
+    "mean_ms": 6.259638,
+    "iteration_sd_ms": 1.4441508794336013,
+    "checkpoint": "F:\\00 Paper-Summary\\1.HSMF-Net-Paper\\01-Experiments\\MobileNet_Ablation_Code-V3\\artifacts\\reviewer4_external_spa24_seed42_v1\\r4_mixersenet_seed42\\checkpoints\\best.pt",
+    "checkpoint_sha256": "fc3dfc98e28a07a523b095a975f29be86dc47f0d12649a2e653df6666b258ef4",
+    "stream": "ema_model"
+  },
+  {
+    "method": "cloln",
+    "repetition": 4,
+    "params_m": 0.00319,
+    "gflops": 0.002562496,
+    "macs_by_operator": {
+      "conv": 1281024.0,
+      "linear": 224.0
+    },
+    "mean_ms": 1.4126445,
+    "iteration_sd_ms": 0.27652578617890106,
+    "checkpoint": "F:\\00 Paper-Summary\\1.HSMF-Net-Paper\\01-Experiments\\MobileNet_Ablation_Code-V3\\artifacts\\reviewer4_external_spa24_seed42_v1\\r4_cloln_seed42\\checkpoints\\best.pt",
+    "checkpoint_sha256": "5c5e3028d24364a541e95e19e60beca661aa802fadf180031421859c360cedab",
+    "stream": "ema_model"
+  },
+  {
+    "method": "mft",
+    "repetition": 4,
+    "params_m": 0.22634,
+    "gflops": 0.04049846,
+    "macs_by_operator": {
+      "conv": 14340096.0,
+      "einsum": 5097870.0,
+      "linear": 811264.0
+    },
+    "mean_ms": 3.203854,
+    "iteration_sd_ms": 0.635291490398592,
+    "checkpoint": "F:\\00 Paper-Summary\\1.HSMF-Net-Paper\\01-Experiments\\MobileNet_Ablation_Code-V3\\artifacts\\reviewer4_external_spa24_seed42_v1\\r4_mft_seed42\\checkpoints\\best.pt",
+    "checkpoint_sha256": "c047c54300215af058944b7fbf6b6897e506fba6476f9498e5110129961722c3",
+    "stream": "ema_model"
+  },
+  {
+    "method": "convsst",
+    "repetition": 4,
+    "params_m": 0.229412,
+    "gflops": 0.484983296,
+    "macs_by_operator": {
+      "conv": 100933632.0,
+      "linear": 56623360.0,
+      "matmul": 84934656.0
+    },
+    "mean_ms": 11.344549,
+    "iteration_sd_ms": 1.2072960726075723,
+    "checkpoint": "F:\\00 Paper-Summary\\1.HSMF-Net-Paper\\01-Experiments\\MobileNet_Ablation_Code-V3\\artifacts\\reviewer4_external_spa24_seed42_v1\\r4_convsst_seed42\\checkpoints\\best.pt",
+    "checkpoint_sha256": "935a28c319ddd2ad542b0b9f3db5689945b769dbe077094efd0a338b261e7a12",
+    "stream": "ema_model"
+  },
+  {
+    "method": "resnet_rh",
+    "repetition": 4,
+    "params_m": 11.17146,
+    "gflops": 0.625512448,
+    "macs_by_operator": {
+      "conv": 312754176.0,
+      "linear": 2048.0
+    },
+    "mean_ms": 9.3418545,
+    "iteration_sd_ms": 1.624503787826629,
+    "checkpoint": "F:\\00 Paper-Summary\\1.HSMF-Net-Paper\\01-Experiments\\MobileNet_Ablation_Code-V3\\artifacts\\reviewer4_external_spa24_seed42_v1\\r4_resnet_rh_seed42\\checkpoints\\best.pt",
+    "checkpoint_sha256": "8d2f5bb9aa93b895b39d907a570132039f0460056c7b11a099acf92990a07c71",
+    "stream": "ema_model"
+  }
+]

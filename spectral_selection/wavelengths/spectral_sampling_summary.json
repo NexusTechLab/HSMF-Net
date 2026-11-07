@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-05",
+  "source": "wavelength_calibration.csv",
+  "source_sha256": "75d302cf70d02f58bb46cf8b6c5fad2b71b09549bdb8b71a7f13e6de04c78b22",
+  "recorded_band_count": 454,
+  "recorded_center_range_nm": [
+    951.54,
+    1698.53
+  ],
+  "adjacent_center_spacing_nm": {
+    "min": 1.64,
+    "max": 1.66,
+    "mean": 1.6489845474613687
+  },
+  "candidate_zero_based_indices": [
+    10,
+    438
+  ],
+  "candidate_center_range_nm": [
+    967.95,
+    1673.67
+  ],
+  "mapping_unique_indices": 59,
+  "mapping_memberships": {
+    "spa24_input_order": 24,
+    "spa50_input_order": 50
+  },
+  "optical_fwhm": "not available in retained acquisition-specific records; not inferred from spacing",
+  "wavelength_calibration_accuracy": "not available in retained acquisition-specific records; not inferred from spacing",
+  "scope": "Read-only metadata calculation; no raw spectra reprocessed or model experiments run."
+}

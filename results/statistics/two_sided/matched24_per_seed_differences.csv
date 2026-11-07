@@ -1,0 +1,21 @@
+contrast,seed,correct_difference,accuracy_difference_pp
+full24 vs concat24,42,5,0.8771929824561403
+full24 vs concat24,43,-1,-0.17543859649122806
+full24 vs concat24,44,0,0.0
+full24 vs concat24,45,-4,-0.7017543859649122
+full24 vs concat24,46,0,0.0
+full24 vs gated24,42,5,0.8771929824561403
+full24 vs gated24,43,-2,-0.3508771929824561
+full24 vs gated24,44,-5,-0.8771929824561403
+full24 vs gated24,45,-2,-0.3508771929824561
+full24 vs gated24,46,8,1.4035087719298245
+full24 vs cross_attention24,42,5,0.8771929824561403
+full24 vs cross_attention24,43,-3,-0.5263157894736842
+full24 vs cross_attention24,44,-11,-1.9298245614035088
+full24 vs cross_attention24,45,-8,-1.4035087719298245
+full24 vs cross_attention24,46,5,0.8771929824561403
+full24 vs no_modulation24,42,-4,-0.7017543859649122
+full24 vs no_modulation24,43,-3,-0.5263157894736842
+full24 vs no_modulation24,44,-14,-2.456140350877193
+full24 vs no_modulation24,45,-12,-2.1052631578947367
+full24 vs no_modulation24,46,4,0.7017543859649122

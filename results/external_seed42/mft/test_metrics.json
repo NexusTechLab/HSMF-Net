@@ -1,0 +1,45 @@
+{
+  "n_test": 570,
+  "correct": 515,
+  "accuracy_pct": 90.35087719298245,
+  "macro_f1_pct": 90.43327922552717,
+  "confusion_counts": [
+    [
+      124,
+      0,
+      0,
+      11
+    ],
+    [
+      0,
+      138,
+      6,
+      6
+    ],
+    [
+      0,
+      9,
+      129,
+      12
+    ],
+    [
+      3,
+      3,
+      5,
+      124
+    ]
+  ],
+  "method": "mft",
+  "seed": 42,
+  "protocol_sha256": "84cb6e1ac076cc660e89776c88f18f6edb0f51cc7d302b299b10e9dfdd4d9f0c",
+  "config_sha256": "175254cb602a2db7b3d981475f522b563f5e14546353d28341ddba45123a9fd8",
+  "predictions_sha256": "cf045c7f6a7faebd744a20ef2b5f5d718ef3827a2036c72187d3baf9f4ad4ca4",
+  "checkpoint_sha256": "c047c54300215af058944b7fbf6b6897e506fba6476f9498e5110129961722c3",
+  "checkpoint_epoch": 84,
+  "checkpoint_stream": "ema_model",
+  "parameters": 226340,
+  "params_m": 0.22634,
+  "gflops": 0.04049846,
+  "latency_ms_mean": 7.391064961254597,
+  "latency_ms_sd": 3.810143699215058
+}

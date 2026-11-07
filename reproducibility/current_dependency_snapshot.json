@@ -1,0 +1,33 @@
+{
+  "python": "3.12.11 | packaged by Anaconda, Inc. | (main, Jun  5 2025, 12:58:53) [MSC v.1929 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "thop_distributions": [
+    "thop",
+    "ultralytics-thop"
+  ],
+  "scope": "Current installed environment snapshot, not an authenticated historical environment or a clean-install-tested dependency lock.",
+  "captured_date": "2026-11-06",
+  "fresh_install_tested": false,
+  "full_transitive_lock": false,
+  "installed_distribution_versions": {
+    "torch": "2.8.0+cu129",
+    "torchvision": "0.23.0+cu129",
+    "numpy": "2.2.6",
+    "PyYAML": "6.0.3",
+    "Pillow": "11.3.0",
+    "tqdm": "4.65.2",
+    "tensorboard": "2.19.0",
+    "thop": "0.1.1-2209072238",
+    "ultralytics-thop": "2.1.6",
+    "matplotlib": "3.10.6",
+    "scikit-learn": "1.7.2",
+    "scipy": "1.16.2",
+    "psutil": "7.1.0"
+  },
+  "imported_module_versions": {
+    "numpy": "2.3.4",
+    "torch": "2.8.0+cu129",
+    "thop": "2.1.6"
+  },
+  "version_record_note": "Installed distribution metadata and active imported modules are recorded separately; these records are not a verified clean-install lock. No environment change was performed."
+}

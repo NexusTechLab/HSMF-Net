@@ -1,0 +1,151 @@
+/* Light theme QSS - Enhanced */
+QMainWindow {
+    background-color: #f5f5f5;
+    color: #333333;
+}
+
+/* 左侧控制面板背景 - 浅灰 */
+#ControlPanel {
+    background-color: #f8f9fa;
+    border-right: 2px solid #dee2e6;
+}
+
+/* 中间图像区域 - 纯白 */
+#ImageArea {
+    background-color: #ffffff;
+}
+
+/* 右侧光谱区 - 淡蓝灰 */
+#SpectrumArea {
+    background-color: #f0f4f8;
+    border-left: 2px solid #dee2e6;
+}
+
+QMenuBar {
+    background-color: #ffffff;
+    color: #333333;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 6px;
+    font-family: "Segoe UI", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
+}
+QMenuBar::item {
+    padding: 4px 12px;
+    border-radius: 4px;
+}
+QMenuBar::item:selected {
+    background-color: #e3f2fd;
+}
+QMenu {
+    background-color: #ffffff;
+    color: #333333;
+    border: 1px solid #cccccc;
+    font-family: "Segoe UI", "Microsoft YaHei UI", sans-serif;
+}
+QMenu::item {
+    padding: 6px 24px 6px 12px;
+}
+QMenu::item:selected {
+    background-color: #e3f2fd;
+}
+QToolBar {
+    background-color: #fafafa;
+    border-bottom: 1px solid #e0e0e0;
+    spacing: 8px;
+    padding: 6px;
+}
+QStatusBar {
+    background-color: #fafafa;
+    color: #555555;
+    border-top: 1px solid #e0e0e0;
+    padding: 4px 8px;
+    font-family: "Segoe UI", "Microsoft YaHei UI", sans-serif;
+    font-size: 10pt;
+}
+QPushButton {
+    background-color: #ffffff;
+    color: #333333;
+    border: 1px solid #cccccc;
+    padding: 6px 12px;
+    border-radius: 3px;
+}
+QPushButton:hover {
+    background-color: #e3f2fd;
+    border-color: #2196f3;
+}
+QPushButton:pressed {
+    background-color: #bbdefb;
+}
+QPushButton:checked {
+    background-color: #2196f3;
+    color: white;
+    border-color: #1976d2;
+}
+QSlider::groove:horizontal {
+    height: 6px;
+    background: #e0e0e0;
+    border-radius: 3px;
+}
+QSlider::handle:horizontal {
+    width: 16px;
+    background: #2196f3;
+    margin: -5px 0;
+    border-radius: 8px;
+}
+QSlider::handle:horizontal:hover {
+    background: #1976d2;
+}
+QSpinBox {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 3px;
+    border-radius: 3px;
+}
+QLabel {
+    color: #333333;
+}
+QWidget {
+    font-family: "Segoe UI", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
+    font-size: 9pt;
+}
+QMainWindow::separator {
+    background: #e0e0e0;
+    width: 1px;
+    height: 1px;
+}
+/* Matplotlib Navigation Toolbar */
+QToolBar QToolButton {
+    padding: 3px;
+    margin: 1px;
+}
+QToolBar QToolButton:hover {
+    background-color: #e3f2fd;
+    border-radius: 3px;
+}
+/* Group Box Styling - Enhanced */
+QGroupBox {
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    margin-top: 12px;
+    padding: 12px 8px 8px 8px;
+    font-weight: 600;
+    background-color: #ffffff;
+}
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    left: 12px;
+    top: 2px;
+    padding: 0 6px;
+    background-color: #ffffff;
+    color: #0969da;
+}
+QGroupBox::indicator {
+    width: 13px;
+    height: 13px;
+}
+QGroupBox::indicator:unchecked {
+    image: url(none);
+}
+QGroupBox::indicator:checked {
+    image: url(none);
+}

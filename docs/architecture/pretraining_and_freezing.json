@@ -1,0 +1,11 @@
+{
+  "matched_ratio": 57.01860891173606,
+  "random_tensor_transfer_succeeded": true,
+  "matched_state_entries": 242,
+  "matched_state_elements_including_buffers": 1530002,
+  "scope": "New compatibility exercise using randomly initialized torchvision tensors, NOT pretrained weights or historical evidence. matched_ratio uses state elements including buffers.",
+  "configured_source": "torchvision mobilenet_v3_small(weights=\"DEFAULT\")",
+  "current_default_enum": "MobileNet_V3_Small_Weights.IMAGENET1K_V1",
+  "historical_success": "unverified",
+  "freeze_policy": "Snapshot optimizer receives model.parameters(); no RGB-backbone freeze schedule was found. EMA copy is separately nontrainable."
+}

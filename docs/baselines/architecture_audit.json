@@ -1,0 +1,195 @@
+{
+  "torch_version": "2.9.0+cu128",
+  "scope": "CPU synthetic shape/parameter inspection; no training, research-data inference, pretrained download, new timing or operation profiling",
+  "models": [
+    {
+      "model": "S1",
+      "registered_parameters": 1521956,
+      "parameters_owned_by_called_modules": 1521956,
+      "uncalled_parameters": 0,
+      "archived_registered_parameters": 1521956,
+      "registered_matches_archived_structure": true,
+      "checkpoint_state_keys_shapes_match": true,
+      "missing": [],
+      "extra": [],
+      "shape_differences": [],
+      "classifier": "Sequential(\n  (0): Linear(in_features=576, out_features=1024, bias=True)\n  (1): Hardswish()\n  (2): Dropout(p=0.2, inplace=True)\n  (3): Linear(in_features=1024, out_features=4, bias=True)\n)",
+      "synthetic_output_shape": [
+        1,
+        4
+      ],
+      "archived_structure_sha256": "a8c7b47902748263b364edc42b989a2e512365962d8705fc30afea7b70a34a0a",
+      "historical_params_m": "1.521956",
+      "historical_G_operations": "0.0615",
+      "historical_CPU_ms_mean": "11.643806665961165",
+      "historical_CPU_ms_sd": "0.8604903771867761"
+    },
+    {
+      "model": "S2",
+      "registered_parameters": 1753124,
+      "parameters_owned_by_called_modules": 1753124,
+      "uncalled_parameters": 0,
+      "archived_registered_parameters": 1753124,
+      "registered_matches_archived_structure": true,
+      "checkpoint_state_keys_shapes_match": true,
+      "missing": [],
+      "extra": [],
+      "shape_differences": [],
+      "classifier": "Sequential(\n  (0): Linear(in_features=576, out_features=1024, bias=True)\n  (1): Hardswish()\n  (2): Dropout(p=0.35, inplace=True)\n  (3): Linear(in_features=1024, out_features=4, bias=True)\n)",
+      "synthetic_output_shape": [
+        1,
+        4
+      ],
+      "archived_structure_sha256": "5f6d8b9f8ea3d389f5ed96a4ebba23af2f40cbfe2c1cf2b533adac369829877e",
+      "historical_params_m": "1.753124",
+      "historical_G_operations": "0.0790",
+      "historical_CPU_ms_mean": "17.931223333531914",
+      "historical_CPU_ms_sd": "1.1850441910347729"
+    },
+    {
+      "model": "S3",
+      "registered_parameters": 924434,
+      "parameters_owned_by_called_modules": 924434,
+      "uncalled_parameters": 0,
+      "archived_registered_parameters": 924434,
+      "registered_matches_archived_structure": true,
+      "checkpoint_state_keys_shapes_match": true,
+      "missing": [],
+      "extra": [],
+      "shape_differences": [],
+      "classifier": "Sequential(\n  (0): Linear(in_features=576, out_features=192, bias=True)\n  (1): Hardswish()\n  (2): Dropout(p=0.35, inplace=False)\n  (3): Linear(in_features=192, out_features=4, bias=True)\n)",
+      "synthetic_output_shape": [
+        1,
+        4
+      ],
+      "archived_structure_sha256": "4d1906171eb888a184f56261f688503ee90a60082de4dc2122c1c61fde9d9120",
+      "historical_params_m": "0.924434",
+      "historical_G_operations": "0.4780",
+      "historical_CPU_ms_mean": "23.909766666959815",
+      "historical_CPU_ms_sd": "2.452571651840823"
+    },
+    {
+      "model": "S4",
+      "registered_parameters": 2874170,
+      "parameters_owned_by_called_modules": 2167666,
+      "uncalled_parameters": 706504,
+      "archived_registered_parameters": 2874170,
+      "registered_matches_archived_structure": true,
+      "checkpoint_state_keys_shapes_match": true,
+      "missing": [],
+      "extra": [],
+      "shape_differences": [],
+      "classifier": "Sequential(\n  (0): Linear(in_features=512, out_features=256, bias=True)\n  (1): Hardswish()\n  (2): Dropout(p=0.35, inplace=False)\n  (3): Linear(in_features=256, out_features=4, bias=True)\n)",
+      "synthetic_output_shape": [
+        1,
+        4
+      ],
+      "archived_structure_sha256": "5518cf69424cd79434f0f532e0358ae27da0800f39a17b56cbb474ee37e518e2",
+      "historical_params_m": "2.87417",
+      "historical_G_operations": "0.5392",
+      "historical_CPU_ms_mean": "49.98390333397159",
+      "historical_CPU_ms_sd": "14.497311595563385"
+    },
+    {
+      "model": "S5",
+      "registered_parameters": 2939962,
+      "parameters_owned_by_called_modules": 2233458,
+      "uncalled_parameters": 706504,
+      "archived_registered_parameters": 2939962,
+      "registered_matches_archived_structure": true,
+      "checkpoint_state_keys_shapes_match": true,
+      "missing": [],
+      "extra": [],
+      "shape_differences": [],
+      "classifier": "Sequential(\n  (0): Linear(in_features=256, out_features=256, bias=True)\n  (1): Hardswish()\n  (2): Dropout(p=0.35, inplace=False)\n  (3): Linear(in_features=256, out_features=4, bias=True)\n)",
+      "synthetic_output_shape": [
+        1,
+        4
+      ],
+      "archived_structure_sha256": "d7a2255f2e5377625b9b9181c151c8f554ee9c62c83863f681b6f0335eb43734",
+      "historical_params_m": "2.939962",
+      "historical_G_operations": "0.5392",
+      "historical_CPU_ms_mean": "47.57679666751452",
+      "historical_CPU_ms_sd": "15.58142490162758"
+    },
+    {
+      "model": "S6",
+      "registered_parameters": 3534142,
+      "parameters_owned_by_called_modules": 2827638,
+      "uncalled_parameters": 706504,
+      "archived_registered_parameters": 3534142,
+      "registered_matches_archived_structure": true,
+      "checkpoint_state_keys_shapes_match": true,
+      "missing": [],
+      "extra": [],
+      "shape_differences": [],
+      "classifier": "Sequential(\n  (0): Linear(in_features=512, out_features=256, bias=True)\n  (1): Hardswish()\n  (2): Dropout(p=0.35, inplace=False)\n  (3): Linear(in_features=256, out_features=4, bias=True)\n)",
+      "synthetic_output_shape": [
+        1,
+        4
+      ],
+      "archived_structure_sha256": "b0dc6f2150b3e23f06b18ee5cbce2022d0ede003ba9928d4d9f3316322d3a554",
+      "historical_params_m": "3.534142",
+      "historical_G_operations": "0.5404",
+      "historical_CPU_ms_mean": "47.87996333470801",
+      "historical_CPU_ms_sd": "14.67191697057123",
+      "attention_heads": 4,
+      "attention_embed": 256,
+      "attention_dropout": 0.1,
+      "attention_weight_shape": [
+        1,
+        4,
+        2,
+        2
+      ],
+      "gate_output": [
+        1,
+        2
+      ]
+    },
+    {
+      "model": "S7",
+      "registered_parameters": 2659402,
+      "parameters_owned_by_called_modules": 1952898,
+      "uncalled_parameters": 706504,
+      "archived_registered_parameters": 2659402,
+      "registered_matches_archived_structure": true,
+      "checkpoint_state_keys_shapes_match": true,
+      "missing": [],
+      "extra": [],
+      "shape_differences": [],
+      "classifier": "Sequential(\n  (0): Linear(in_features=272, out_features=192, bias=True)\n  (1): Hardswish()\n  (2): Dropout(p=0.35, inplace=False)\n  (3): Linear(in_features=192, out_features=4, bias=True)\n)",
+      "synthetic_output_shape": [
+        1,
+        4
+      ],
+      "archived_structure_sha256": "41c69a2d8acc3db6319bc0b61ba92f4df13b12a08de93edc2939c46f964f3b42",
+      "historical_params_m": "2.659402",
+      "historical_G_operations": "0.5466",
+      "historical_CPU_ms_mean": "48.5107666667318",
+      "historical_CPU_ms_sd": "3.684528625294111"
+    },
+    {
+      "model": "S8",
+      "registered_parameters": 2659402,
+      "parameters_owned_by_called_modules": 1952898,
+      "uncalled_parameters": 706504,
+      "archived_registered_parameters": 2659402,
+      "registered_matches_archived_structure": true,
+      "checkpoint_state_keys_shapes_match": true,
+      "missing": [],
+      "extra": [],
+      "shape_differences": [],
+      "classifier": "Sequential(\n  (0): Linear(in_features=272, out_features=192, bias=True)\n  (1): Hardswish()\n  (2): Dropout(p=0.35, inplace=False)\n  (3): Linear(in_features=192, out_features=4, bias=True)\n)",
+      "synthetic_output_shape": [
+        1,
+        4
+      ],
+      "archived_structure_sha256": "0a452fa7bd6bb84a224cd8a77078527eba78624424cea665a88e10ac2df7a241",
+      "historical_params_m": "2.659402",
+      "historical_G_operations": "0.3294",
+      "historical_CPU_ms_mean": "22.72654333258591",
+      "historical_CPU_ms_sd": "0.8569764849236938"
+    }
+  ]
+}

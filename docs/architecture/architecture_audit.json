@@ -1,0 +1,1696 @@
+{
+  "audit_date": "2026-11-05",
+  "scope": "Current snapshot CPU synthetic-input architecture audit only",
+  "runtime": {
+    "python": "3.12.11",
+    "torch": "2.8.0+cu129",
+    "torchvision": "0.23.0+cu129",
+    "thop": "2.1.6"
+  },
+  "results": [
+    {
+      "tag": "S8",
+      "input_shapes": [
+        [
+          1,
+          3,
+          224,
+          224
+        ],
+        [
+          1,
+          1,
+          24,
+          24,
+          24
+        ]
+      ],
+      "output_shape": [
+        1,
+        4
+      ],
+      "registered_parameters": 2659402,
+      "registered_trainable_parameters": 2659402,
+      "registered_nontrainable_parameters": 0,
+      "executed_parameter_count": 1952898,
+      "unused_registered_parameter_count": 706504,
+      "registered_buffer_elements": 23936,
+      "conv_linear_MACs": 317935008,
+      "conv_linear_GMACs": 0.317935008,
+      "current_thop_count": 329383552.0,
+      "current_thop_count_G": 0.329383552,
+      "current_thop_profiled_parameters": 2659402.0,
+      "called_leaf_types_without_thop_rule": [
+        "AdaptiveSpectralPool",
+        "Hardsigmoid",
+        "Hardswish"
+      ],
+      "key_tensor_shapes": {
+        "rgb_branch.features.6": [
+          {
+            "input": [
+              [
+                1,
+                40,
+                14,
+                14
+              ]
+            ],
+            "output": [
+              1,
+              40,
+              14,
+              14
+            ]
+          }
+        ],
+        "rgb_branch.features.12": [
+          {
+            "input": [
+              [
+                1,
+                96,
+                7,
+                7
+              ]
+            ],
+            "output": [
+              1,
+              576,
+              7,
+              7
+            ]
+          }
+        ],
+        "hsi_branch.encoder3d": [
+          {
+            "input": [
+              [
+                1,
+                1,
+                24,
+                24,
+                24
+              ]
+            ],
+            "output": [
+              1,
+              32,
+              24,
+              12,
+              12
+            ]
+          }
+        ],
+        "hsi_branch.spectral_filter": [
+          {
+            "input": [
+              [
+                1,
+                32,
+                24,
+                12,
+                12
+              ]
+            ],
+            "output": [
+              1,
+              32,
+              24,
+              12,
+              12
+            ]
+          }
+        ],
+        "hsi_branch.spectral_compressor": [
+          {
+            "input": [
+              [
+                1,
+                32,
+                24,
+                12,
+                12
+              ]
+            ],
+            "output": [
+              1,
+              256,
+              12,
+              12
+            ]
+          }
+        ],
+        "hsi_branch.features2d.3": [
+          {
+            "input": [
+              [
+                1,
+                40,
+                12,
+                12
+              ]
+            ],
+            "output": [
+              1,
+              40,
+              12,
+              12
+            ]
+          }
+        ],
+        "hsi_branch.features2d.7": [
+          {
+            "input": [
+              [
+                1,
+                96,
+                6,
+                6
+              ]
+            ],
+            "output": [
+              1,
+              576,
+              6,
+              6
+            ]
+          }
+        ],
+        "rgb_mid_align": [
+          {
+            "input": [
+              [
+                1,
+                40,
+                14,
+                14
+              ],
+              [
+                "int",
+                "int"
+              ]
+            ],
+            "output": [
+              1,
+              40,
+              12,
+              12
+            ]
+          }
+        ],
+        "hsi_mid_proj": [
+          {
+            "input": [
+              [
+                1,
+                40,
+                12,
+                12
+              ]
+            ],
+            "output": [
+              1,
+              40,
+              12,
+              12
+            ]
+          }
+        ],
+        "mid_film": [
+          {
+            "input": [
+              [
+                1,
+                40,
+                12,
+                12
+              ],
+              [
+                1,
+                40,
+                12,
+                12
+              ]
+            ],
+            "output": [
+              [
+                1,
+                40,
+                12,
+                12
+              ],
+              [
+                1,
+                40,
+                12,
+                12
+              ]
+            ]
+          }
+        ],
+        "hsi_mid_back": [
+          {
+            "input": [
+              [
+                1,
+                40,
+                12,
+                12
+              ]
+            ],
+            "output": [
+              1,
+              40,
+              12,
+              12
+            ]
+          }
+        ],
+        "rgb_late_align": [
+          {
+            "input": [
+              [
+                1,
+                576,
+                7,
+                7
+              ],
+              [
+                "int",
+                "int"
+              ]
+            ],
+            "output": [
+              1,
+              96,
+              6,
+              6
+            ]
+          }
+        ],
+        "hsi_late_proj": [
+          {
+            "input": [
+              [
+                1,
+                576,
+                6,
+                6
+              ]
+            ],
+            "output": [
+              1,
+              96,
+              6,
+              6
+            ]
+          }
+        ],
+        "late_film": [
+          {
+            "input": [
+              [
+                1,
+                96,
+                6,
+                6
+              ],
+              [
+                1,
+                96,
+                6,
+                6
+              ]
+            ],
+            "output": [
+              [
+                1,
+                96,
+                6,
+                6
+              ],
+              [
+                1,
+                96,
+                6,
+                6
+              ]
+            ]
+          }
+        ],
+        "classifier": [
+          {
+            "input": [
+              [
+                1,
+                272
+              ]
+            ],
+            "output": [
+              1,
+              4
+            ]
+          }
+        ]
+      },
+      "bottlenecks": [
+        {
+          "block": "rgb_branch.features.1",
+          "input_channels": 16,
+          "expanded_channels": 16,
+          "expansion_ratio": 1.0,
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            2,
+            2
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "depthwise_groups": 16,
+          "SE": true,
+          "activation": "ReLU",
+          "residual": false,
+          "output_channels": 16,
+          "output_shape": "[1, 16, 56, 56]",
+          "parameters": 744
+        },
+        {
+          "block": "rgb_branch.features.2",
+          "input_channels": 16,
+          "expanded_channels": 72,
+          "expansion_ratio": 4.5,
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            2,
+            2
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "depthwise_groups": 72,
+          "SE": false,
+          "activation": "ReLU",
+          "residual": false,
+          "output_channels": 24,
+          "output_shape": "[1, 24, 28, 28]",
+          "parameters": 3864
+        },
+        {
+          "block": "rgb_branch.features.3",
+          "input_channels": 24,
+          "expanded_channels": 88,
+          "expansion_ratio": 3.6666666666666665,
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "depthwise_groups": 88,
+          "SE": false,
+          "activation": "ReLU",
+          "residual": true,
+          "output_channels": 24,
+          "output_shape": "[1, 24, 28, 28]",
+          "parameters": 5416
+        },
+        {
+          "block": "rgb_branch.features.4",
+          "input_channels": 24,
+          "expanded_channels": 96,
+          "expansion_ratio": 4.0,
+          "kernel": [
+            5,
+            5
+          ],
+          "stride": [
+            2,
+            2
+          ],
+          "padding": [
+            2,
+            2
+          ],
+          "depthwise_groups": 96,
+          "SE": true,
+          "activation": "Hardswish",
+          "residual": false,
+          "output_channels": 40,
+          "output_shape": "[1, 40, 14, 14]",
+          "parameters": 13736
+        },
+        {
+          "block": "rgb_branch.features.5",
+          "input_channels": 40,
+          "expanded_channels": 240,
+          "expansion_ratio": 6.0,
+          "kernel": [
+            5,
+            5
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            2,
+            2
+          ],
+          "depthwise_groups": 240,
+          "SE": true,
+          "activation": "Hardswish",
+          "residual": true,
+          "output_channels": 40,
+          "output_shape": "[1, 40, 14, 14]",
+          "parameters": 57264
+        },
+        {
+          "block": "rgb_branch.features.6",
+          "input_channels": 40,
+          "expanded_channels": 240,
+          "expansion_ratio": 6.0,
+          "kernel": [
+            5,
+            5
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            2,
+            2
+          ],
+          "depthwise_groups": 240,
+          "SE": true,
+          "activation": "Hardswish",
+          "residual": true,
+          "output_channels": 40,
+          "output_shape": "[1, 40, 14, 14]",
+          "parameters": 57264
+        },
+        {
+          "block": "rgb_branch.features.7",
+          "input_channels": 40,
+          "expanded_channels": 120,
+          "expansion_ratio": 3.0,
+          "kernel": [
+            5,
+            5
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            2,
+            2
+          ],
+          "depthwise_groups": 120,
+          "SE": true,
+          "activation": "Hardswish",
+          "residual": false,
+          "output_channels": 48,
+          "output_shape": "[1, 48, 14, 14]",
+          "parameters": 21968
+        },
+        {
+          "block": "rgb_branch.features.8",
+          "input_channels": 48,
+          "expanded_channels": 144,
+          "expansion_ratio": 3.0,
+          "kernel": [
+            5,
+            5
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            2,
+            2
+          ],
+          "depthwise_groups": 144,
+          "SE": true,
+          "activation": "Hardswish",
+          "residual": true,
+          "output_channels": 48,
+          "output_shape": "[1, 48, 14, 14]",
+          "parameters": 29800
+        },
+        {
+          "block": "rgb_branch.features.9",
+          "input_channels": 48,
+          "expanded_channels": 288,
+          "expansion_ratio": 6.0,
+          "kernel": [
+            5,
+            5
+          ],
+          "stride": [
+            2,
+            2
+          ],
+          "padding": [
+            2,
+            2
+          ],
+          "depthwise_groups": 288,
+          "SE": true,
+          "activation": "Hardswish",
+          "residual": false,
+          "output_channels": 96,
+          "output_shape": "[1, 96, 7, 7]",
+          "parameters": 91848
+        },
+        {
+          "block": "rgb_branch.features.10",
+          "input_channels": 96,
+          "expanded_channels": 576,
+          "expansion_ratio": 6.0,
+          "kernel": [
+            5,
+            5
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            2,
+            2
+          ],
+          "depthwise_groups": 576,
+          "SE": true,
+          "activation": "Hardswish",
+          "residual": true,
+          "output_channels": 96,
+          "output_shape": "[1, 96, 7, 7]",
+          "parameters": 294096
+        },
+        {
+          "block": "rgb_branch.features.11",
+          "input_channels": 96,
+          "expanded_channels": 576,
+          "expansion_ratio": 6.0,
+          "kernel": [
+            5,
+            5
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            2,
+            2
+          ],
+          "depthwise_groups": 576,
+          "SE": true,
+          "activation": "Hardswish",
+          "residual": true,
+          "output_channels": 96,
+          "output_shape": "[1, 96, 7, 7]",
+          "parameters": 294096
+        },
+        {
+          "block": "hsi_branch.features2d.0",
+          "input_channels": 256,
+          "expanded_channels": 1024,
+          "expansion_ratio": 4.0,
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "depthwise_groups": 1024,
+          "SE": false,
+          "activation": "ReLU",
+          "residual": false,
+          "output_channels": 24,
+          "output_shape": "[1, 24, 12, 12]",
+          "parameters": 300080
+        },
+        {
+          "block": "hsi_branch.features2d.1",
+          "input_channels": 24,
+          "expanded_channels": 72,
+          "expansion_ratio": 3.0,
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "depthwise_groups": 72,
+          "SE": false,
+          "activation": "ReLU",
+          "residual": true,
+          "output_channels": 24,
+          "output_shape": "[1, 24, 12, 12]",
+          "parameters": 4440
+        },
+        {
+          "block": "hsi_branch.features2d.2",
+          "input_channels": 24,
+          "expanded_channels": 72,
+          "expansion_ratio": 3.0,
+          "kernel": [
+            5,
+            5
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            2,
+            2
+          ],
+          "depthwise_groups": 72,
+          "SE": true,
+          "activation": "Hardswish",
+          "residual": false,
+          "output_channels": 40,
+          "output_shape": "[1, 40, 12, 12]",
+          "parameters": 9458
+        },
+        {
+          "block": "hsi_branch.features2d.3",
+          "input_channels": 40,
+          "expanded_channels": 120,
+          "expansion_ratio": 3.0,
+          "kernel": [
+            5,
+            5
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            2,
+            2
+          ],
+          "depthwise_groups": 120,
+          "SE": true,
+          "activation": "Hardswish",
+          "residual": true,
+          "output_channels": 40,
+          "output_shape": "[1, 40, 12, 12]",
+          "parameters": 20510
+        },
+        {
+          "block": "hsi_branch.features2d.4",
+          "input_channels": 40,
+          "expanded_channels": 120,
+          "expansion_ratio": 3.0,
+          "kernel": [
+            5,
+            5
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            2,
+            2
+          ],
+          "depthwise_groups": 120,
+          "SE": true,
+          "activation": "Hardswish",
+          "residual": false,
+          "output_channels": 48,
+          "output_shape": "[1, 48, 12, 12]",
+          "parameters": 21486
+        },
+        {
+          "block": "hsi_branch.features2d.5",
+          "input_channels": 48,
+          "expanded_channels": 288,
+          "expansion_ratio": 6.0,
+          "kernel": [
+            5,
+            5
+          ],
+          "stride": [
+            2,
+            2
+          ],
+          "padding": [
+            2,
+            2
+          ],
+          "depthwise_groups": 288,
+          "SE": true,
+          "activation": "Hardswish",
+          "residual": false,
+          "output_channels": 96,
+          "output_shape": "[1, 96, 6, 6]",
+          "parameters": 91848
+        },
+        {
+          "block": "hsi_branch.features2d.6",
+          "input_channels": 96,
+          "expanded_channels": 576,
+          "expansion_ratio": 6.0,
+          "kernel": [
+            5,
+            5
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            2,
+            2
+          ],
+          "depthwise_groups": 576,
+          "SE": true,
+          "activation": "Hardswish",
+          "residual": true,
+          "output_channels": 96,
+          "output_shape": "[1, 96, 6, 6]",
+          "parameters": 294096
+        }
+      ],
+      "note": "New CPU structural audit, no pretrained weight loading, training or historical execution authentication."
+    },
+    {
+      "tag": "S7",
+      "input_shapes": [
+        [
+          1,
+          3,
+          224,
+          224
+        ],
+        [
+          1,
+          1,
+          50,
+          24,
+          24
+        ]
+      ],
+      "output_shape": [
+        1,
+        4
+      ],
+      "registered_parameters": 2659402,
+      "registered_trainable_parameters": 2659402,
+      "registered_nontrainable_parameters": 0,
+      "executed_parameter_count": 1952898,
+      "unused_registered_parameter_count": 706504,
+      "registered_buffer_elements": 23936,
+      "conv_linear_MACs": 531792288,
+      "conv_linear_GMACs": 0.531792288,
+      "current_thop_count": 546595456.0,
+      "current_thop_count_G": 0.546595456,
+      "current_thop_profiled_parameters": 2659402.0,
+      "called_leaf_types_without_thop_rule": [
+        "AdaptiveSpectralPool",
+        "Hardsigmoid",
+        "Hardswish"
+      ],
+      "key_tensor_shapes": {
+        "rgb_branch.features.6": [
+          {
+            "input": [
+              [
+                1,
+                40,
+                14,
+                14
+              ]
+            ],
+            "output": [
+              1,
+              40,
+              14,
+              14
+            ]
+          }
+        ],
+        "rgb_branch.features.12": [
+          {
+            "input": [
+              [
+                1,
+                96,
+                7,
+                7
+              ]
+            ],
+            "output": [
+              1,
+              576,
+              7,
+              7
+            ]
+          }
+        ],
+        "hsi_branch.encoder3d": [
+          {
+            "input": [
+              [
+                1,
+                1,
+                50,
+                24,
+                24
+              ]
+            ],
+            "output": [
+              1,
+              32,
+              50,
+              12,
+              12
+            ]
+          }
+        ],
+        "hsi_branch.spectral_filter": [
+          {
+            "input": [
+              [
+                1,
+                32,
+                50,
+                12,
+                12
+              ]
+            ],
+            "output": [
+              1,
+              32,
+              50,
+              12,
+              12
+            ]
+          }
+        ],
+        "hsi_branch.spectral_compressor": [
+          {
+            "input": [
+              [
+                1,
+                32,
+                50,
+                12,
+                12
+              ]
+            ],
+            "output": [
+              1,
+              256,
+              12,
+              12
+            ]
+          }
+        ],
+        "hsi_branch.features2d.3": [
+          {
+            "input": [
+              [
+                1,
+                40,
+                12,
+                12
+              ]
+            ],
+            "output": [
+              1,
+              40,
+              12,
+              12
+            ]
+          }
+        ],
+        "hsi_branch.features2d.7": [
+          {
+            "input": [
+              [
+                1,
+                96,
+                6,
+                6
+              ]
+            ],
+            "output": [
+              1,
+              576,
+              6,
+              6
+            ]
+          }
+        ],
+        "rgb_mid_align": [
+          {
+            "input": [
+              [
+                1,
+                40,
+                14,
+                14
+              ],
+              [
+                "int",
+                "int"
+              ]
+            ],
+            "output": [
+              1,
+              40,
+              12,
+              12
+            ]
+          }
+        ],
+        "hsi_mid_proj": [
+          {
+            "input": [
+              [
+                1,
+                40,
+                12,
+                12
+              ]
+            ],
+            "output": [
+              1,
+              40,
+              12,
+              12
+            ]
+          }
+        ],
+        "mid_film": [
+          {
+            "input": [
+              [
+                1,
+                40,
+                12,
+                12
+              ],
+              [
+                1,
+                40,
+                12,
+                12
+              ]
+            ],
+            "output": [
+              [
+                1,
+                40,
+                12,
+                12
+              ],
+              [
+                1,
+                40,
+                12,
+                12
+              ]
+            ]
+          }
+        ],
+        "hsi_mid_back": [
+          {
+            "input": [
+              [
+                1,
+                40,
+                12,
+                12
+              ]
+            ],
+            "output": [
+              1,
+              40,
+              12,
+              12
+            ]
+          }
+        ],
+        "rgb_late_align": [
+          {
+            "input": [
+              [
+                1,
+                576,
+                7,
+                7
+              ],
+              [
+                "int",
+                "int"
+              ]
+            ],
+            "output": [
+              1,
+              96,
+              6,
+              6
+            ]
+          }
+        ],
+        "hsi_late_proj": [
+          {
+            "input": [
+              [
+                1,
+                576,
+                6,
+                6
+              ]
+            ],
+            "output": [
+              1,
+              96,
+              6,
+              6
+            ]
+          }
+        ],
+        "late_film": [
+          {
+            "input": [
+              [
+                1,
+                96,
+                6,
+                6
+              ],
+              [
+                1,
+                96,
+                6,
+                6
+              ]
+            ],
+            "output": [
+              [
+                1,
+                96,
+                6,
+                6
+              ],
+              [
+                1,
+                96,
+                6,
+                6
+              ]
+            ]
+          }
+        ],
+        "classifier": [
+          {
+            "input": [
+              [
+                1,
+                272
+              ]
+            ],
+            "output": [
+              1,
+              4
+            ]
+          }
+        ]
+      },
+      "bottlenecks": [
+        {
+          "block": "rgb_branch.features.1",
+          "input_channels": 16,
+          "expanded_channels": 16,
+          "expansion_ratio": 1.0,
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            2,
+            2
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "depthwise_groups": 16,
+          "SE": true,
+          "activation": "ReLU",
+          "residual": false,
+          "output_channels": 16,
+          "output_shape": "[1, 16, 56, 56]",
+          "parameters": 744
+        },
+        {
+          "block": "rgb_branch.features.2",
+          "input_channels": 16,
+          "expanded_channels": 72,
+          "expansion_ratio": 4.5,
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            2,
+            2
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "depthwise_groups": 72,
+          "SE": false,
+          "activation": "ReLU",
+          "residual": false,
+          "output_channels": 24,
+          "output_shape": "[1, 24, 28, 28]",
+          "parameters": 3864
+        },
+        {
+          "block": "rgb_branch.features.3",
+          "input_channels": 24,
+          "expanded_channels": 88,
+          "expansion_ratio": 3.6666666666666665,
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "depthwise_groups": 88,
+          "SE": false,
+          "activation": "ReLU",
+          "residual": true,
+          "output_channels": 24,
+          "output_shape": "[1, 24, 28, 28]",
+          "parameters": 5416
+        },
+        {
+          "block": "rgb_branch.features.4",
+          "input_channels": 24,
+          "expanded_channels": 96,
+          "expansion_ratio": 4.0,
+          "kernel": [
+            5,
+            5
+          ],
+          "stride": [
+            2,
+            2
+          ],
+          "padding": [
+            2,
+            2
+          ],
+          "depthwise_groups": 96,
+          "SE": true,
+          "activation": "Hardswish",
+          "residual": false,
+          "output_channels": 40,
+          "output_shape": "[1, 40, 14, 14]",
+          "parameters": 13736
+        },
+        {
+          "block": "rgb_branch.features.5",
+          "input_channels": 40,
+          "expanded_channels": 240,
+          "expansion_ratio": 6.0,
+          "kernel": [
+            5,
+            5
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            2,
+            2
+          ],
+          "depthwise_groups": 240,
+          "SE": true,
+          "activation": "Hardswish",
+          "residual": true,
+          "output_channels": 40,
+          "output_shape": "[1, 40, 14, 14]",
+          "parameters": 57264
+        },
+        {
+          "block": "rgb_branch.features.6",
+          "input_channels": 40,
+          "expanded_channels": 240,
+          "expansion_ratio": 6.0,
+          "kernel": [
+            5,
+            5
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            2,
+            2
+          ],
+          "depthwise_groups": 240,
+          "SE": true,
+          "activation": "Hardswish",
+          "residual": true,
+          "output_channels": 40,
+          "output_shape": "[1, 40, 14, 14]",
+          "parameters": 57264
+        },
+        {
+          "block": "rgb_branch.features.7",
+          "input_channels": 40,
+          "expanded_channels": 120,
+          "expansion_ratio": 3.0,
+          "kernel": [
+            5,
+            5
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            2,
+            2
+          ],
+          "depthwise_groups": 120,
+          "SE": true,
+          "activation": "Hardswish",
+          "residual": false,
+          "output_channels": 48,
+          "output_shape": "[1, 48, 14, 14]",
+          "parameters": 21968
+        },
+        {
+          "block": "rgb_branch.features.8",
+          "input_channels": 48,
+          "expanded_channels": 144,
+          "expansion_ratio": 3.0,
+          "kernel": [
+            5,
+            5
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            2,
+            2
+          ],
+          "depthwise_groups": 144,
+          "SE": true,
+          "activation": "Hardswish",
+          "residual": true,
+          "output_channels": 48,
+          "output_shape": "[1, 48, 14, 14]",
+          "parameters": 29800
+        },
+        {
+          "block": "rgb_branch.features.9",
+          "input_channels": 48,
+          "expanded_channels": 288,
+          "expansion_ratio": 6.0,
+          "kernel": [
+            5,
+            5
+          ],
+          "stride": [
+            2,
+            2
+          ],
+          "padding": [
+            2,
+            2
+          ],
+          "depthwise_groups": 288,
+          "SE": true,
+          "activation": "Hardswish",
+          "residual": false,
+          "output_channels": 96,
+          "output_shape": "[1, 96, 7, 7]",
+          "parameters": 91848
+        },
+        {
+          "block": "rgb_branch.features.10",
+          "input_channels": 96,
+          "expanded_channels": 576,
+          "expansion_ratio": 6.0,
+          "kernel": [
+            5,
+            5
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            2,
+            2
+          ],
+          "depthwise_groups": 576,
+          "SE": true,
+          "activation": "Hardswish",
+          "residual": true,
+          "output_channels": 96,
+          "output_shape": "[1, 96, 7, 7]",
+          "parameters": 294096
+        },
+        {
+          "block": "rgb_branch.features.11",
+          "input_channels": 96,
+          "expanded_channels": 576,
+          "expansion_ratio": 6.0,
+          "kernel": [
+            5,
+            5
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            2,
+            2
+          ],
+          "depthwise_groups": 576,
+          "SE": true,
+          "activation": "Hardswish",
+          "residual": true,
+          "output_channels": 96,
+          "output_shape": "[1, 96, 7, 7]",
+          "parameters": 294096
+        },
+        {
+          "block": "hsi_branch.features2d.0",
+          "input_channels": 256,
+          "expanded_channels": 1024,
+          "expansion_ratio": 4.0,
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "depthwise_groups": 1024,
+          "SE": false,
+          "activation": "ReLU",
+          "residual": false,
+          "output_channels": 24,
+          "output_shape": "[1, 24, 12, 12]",
+          "parameters": 300080
+        },
+        {
+          "block": "hsi_branch.features2d.1",
+          "input_channels": 24,
+          "expanded_channels": 72,
+          "expansion_ratio": 3.0,
+          "kernel": [
+            3,
+            3
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            1,
+            1
+          ],
+          "depthwise_groups": 72,
+          "SE": false,
+          "activation": "ReLU",
+          "residual": true,
+          "output_channels": 24,
+          "output_shape": "[1, 24, 12, 12]",
+          "parameters": 4440
+        },
+        {
+          "block": "hsi_branch.features2d.2",
+          "input_channels": 24,
+          "expanded_channels": 72,
+          "expansion_ratio": 3.0,
+          "kernel": [
+            5,
+            5
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            2,
+            2
+          ],
+          "depthwise_groups": 72,
+          "SE": true,
+          "activation": "Hardswish",
+          "residual": false,
+          "output_channels": 40,
+          "output_shape": "[1, 40, 12, 12]",
+          "parameters": 9458
+        },
+        {
+          "block": "hsi_branch.features2d.3",
+          "input_channels": 40,
+          "expanded_channels": 120,
+          "expansion_ratio": 3.0,
+          "kernel": [
+            5,
+            5
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            2,
+            2
+          ],
+          "depthwise_groups": 120,
+          "SE": true,
+          "activation": "Hardswish",
+          "residual": true,
+          "output_channels": 40,
+          "output_shape": "[1, 40, 12, 12]",
+          "parameters": 20510
+        },
+        {
+          "block": "hsi_branch.features2d.4",
+          "input_channels": 40,
+          "expanded_channels": 120,
+          "expansion_ratio": 3.0,
+          "kernel": [
+            5,
+            5
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            2,
+            2
+          ],
+          "depthwise_groups": 120,
+          "SE": true,
+          "activation": "Hardswish",
+          "residual": false,
+          "output_channels": 48,
+          "output_shape": "[1, 48, 12, 12]",
+          "parameters": 21486
+        },
+        {
+          "block": "hsi_branch.features2d.5",
+          "input_channels": 48,
+          "expanded_channels": 288,
+          "expansion_ratio": 6.0,
+          "kernel": [
+            5,
+            5
+          ],
+          "stride": [
+            2,
+            2
+          ],
+          "padding": [
+            2,
+            2
+          ],
+          "depthwise_groups": 288,
+          "SE": true,
+          "activation": "Hardswish",
+          "residual": false,
+          "output_channels": 96,
+          "output_shape": "[1, 96, 6, 6]",
+          "parameters": 91848
+        },
+        {
+          "block": "hsi_branch.features2d.6",
+          "input_channels": 96,
+          "expanded_channels": 576,
+          "expansion_ratio": 6.0,
+          "kernel": [
+            5,
+            5
+          ],
+          "stride": [
+            1,
+            1
+          ],
+          "padding": [
+            2,
+            2
+          ],
+          "depthwise_groups": 576,
+          "SE": true,
+          "activation": "Hardswish",
+          "residual": true,
+          "output_channels": 96,
+          "output_shape": "[1, 96, 6, 6]",
+          "parameters": 294096
+        }
+      ],
+      "note": "New CPU structural audit, no pretrained weight loading, training or historical execution authentication."
+    }
+  ],
+  "pretraining": {
+    "matched_ratio": 57.01860891173606,
+    "random_tensor_transfer_succeeded": true,
+    "matched_state_entries": 242,
+    "matched_state_elements_including_buffers": 1530002,
+    "scope": "New compatibility exercise using randomly initialized torchvision tensors, NOT pretrained weights or historical evidence. matched_ratio uses state elements including buffers.",
+    "configured_source": "torchvision mobilenet_v3_small(weights=\"DEFAULT\")",
+    "current_default_enum": "MobileNet_V3_Small_Weights.IMAGENET1K_V1",
+    "historical_success": "unverified",
+    "freeze_policy": "Snapshot optimizer receives model.parameters(); no RGB-backbone freeze schedule was found. EMA copy is separately nontrainable."
+  },
+  "checkpoint_structure_checks": [
+    {
+      "model": "S8",
+      "seed": 42,
+      "stream": "model",
+      "state_entries": 468,
+      "keys_and_shapes_match": true,
+      "checkpoint_sha256": "2d41fcd77a877603c3d8263a7b4a726978d0c774a704e4e0b0708d05120802a1",
+      "pretraining_metadata_keys": [],
+      "note": "State-key/shape compatibility only; no historical prediction or input authentication."
+    },
+    {
+      "model": "S8",
+      "seed": 42,
+      "stream": "ema_model",
+      "state_entries": 468,
+      "keys_and_shapes_match": true,
+      "checkpoint_sha256": "2d41fcd77a877603c3d8263a7b4a726978d0c774a704e4e0b0708d05120802a1",
+      "pretraining_metadata_keys": [],
+      "note": "State-key/shape compatibility only; no historical prediction or input authentication."
+    },
+    {
+      "model": "S7",
+      "seed": 42,
+      "stream": "model",
+      "state_entries": 468,
+      "keys_and_shapes_match": true,
+      "checkpoint_sha256": "441b42f6718fc3fdbb5fe4c5426dbeb13bcdd10242a6c743195f3489b481252c",
+      "pretraining_metadata_keys": [],
+      "note": "State-key/shape compatibility only; no historical prediction or input authentication."
+    },
+    {
+      "model": "S7",
+      "seed": 42,
+      "stream": "ema_model",
+      "state_entries": 468,
+      "keys_and_shapes_match": true,
+      "checkpoint_sha256": "441b42f6718fc3fdbb5fe4c5426dbeb13bcdd10242a6c743195f3489b481252c",
+      "pretraining_metadata_keys": [],
+      "note": "State-key/shape compatibility only; no historical prediction or input authentication."
+    }
+  ],
+  "profiling_source_hashes": {
+    "C:\\Users\\Sugar\\.conda\\envs\\yolov3-9.6.0\\Lib\\site-packages\\thop\\profile.py": "cdb263ad4e7714f8be8bcd2326476d4e70fee4b3d47d5f251730500fef4ca29d",
+    "C:\\Users\\Sugar\\.conda\\envs\\yolov3-9.6.0\\Lib\\site-packages\\thop\\vision\\basic_hooks.py": "1762747dda68b7f22fb437d007942eade39be7c3e8de772cfad1ea400bf18ae8",
+    "C:\\Users\\Sugar\\.conda\\envs\\yolov3-9.6.0\\Lib\\site-packages\\thop\\vision\\calc_func.py": "1ad4936436e4e994d77671ccb43b38739e51ccbcc6e6fdd39d5aa98c435346fc"
+  },
+  "audit_script_sha256": "7e9fc2b3f2022f15eeefbc497e97167a53a44539ca92a59ea52db7fd2875cafe",
+  "source_hashes": {
+    "code_snapshot\\src\\mobilenet_enterprise\\registry.py": "3328348b888e8fbe63ef5ba59a4281a8daa650e619c3dc92a46fd366e5bc7ef3",
+    "resolved_configs\\S8_seed42.yaml": "9956b1634022f0fec3447d8d467477776204dcb02119c6d3c8b217129eee61cd",
+    "resolved_configs\\S7_seed42.yaml": "8e17c5288b2129411cc9050d0344aef1d9938d52666e41c5097a16d5e1a1c599",
+    "code_snapshot\\src\\mobilenet_enterprise\\models\\base.py": "eb084bf85d417985366976a245b131b7cd82533ba791a46ff3f87086d3c09863",
+    "code_snapshot\\src\\mobilenet_enterprise\\models\\blocks.py": "d3bd8d6333dbaa89884a9beb7171da45d835faa089707706d7c66f6af889000d",
+    "code_snapshot\\src\\mobilenet_enterprise\\models\\__init__.py": "da12a2f65e95362ca0956e39a9176984ed1aaa4a7efcbbe1b1c7ebd9d88d3736",
+    "code_snapshot\\src\\mobilenet_enterprise\\models\\fusion\\attention.py": "d858c1b4a6c7af0ae0633f67f174c5d0d13ce108d04eb548be7d0174199ea826",
+    "code_snapshot\\src\\mobilenet_enterprise\\models\\fusion\\rgb_hsi_fusion.py": "c85442575bed303381aa4fbb25eb02c580080ca2dabcfb752d064a04cbd1bacc",
+    "code_snapshot\\src\\mobilenet_enterprise\\models\\fusion\\rgb_hsi_mid_film.py": "b579ce643ed01e1498c77343e276ecda396480cae58def73ae042a7e2e94c100",
+    "code_snapshot\\src\\mobilenet_enterprise\\models\\fusion\\spatial_film.py": "caa9310245347233971ddf20725b58e25079643b7810568caf67dcc13d0f5897",
+    "code_snapshot\\src\\mobilenet_enterprise\\models\\fusion\\__init__.py": "a282451ca9074ec66b0cfdde9dd0b96ba997f5336b54bfc68a200e328a1e9363",
+    "code_snapshot\\src\\mobilenet_enterprise\\models\\three_d\\hybridsn.py": "63625fab748c9c688383bc1159a999d188d95525911bf7f3363ebd44aa18de6a",
+    "code_snapshot\\src\\mobilenet_enterprise\\models\\three_d\\mobilenet3d_v3.py": "2607e822db5fb869abbcb597a3072f7f31a5f6da1439a88696ba5cd9fb9026bd",
+    "code_snapshot\\src\\mobilenet_enterprise\\models\\three_d\\mobilenet_v3_pure3d.py": "787357ce02659b77686682c56f4b39a8359b36dab25b7b7e0a6c23570de5901c",
+    "code_snapshot\\src\\mobilenet_enterprise\\models\\three_d\\pure3d.py": "32d3d4bb85b4843cac88a7d38d7362e75b2d0948b0991645f4fece5dab598403",
+    "code_snapshot\\src\\mobilenet_enterprise\\models\\three_d\\spectral_compressor.py": "76ff93f30679038fa72b053e4891da09060595c78fa255efe56349750521822f",
+    "code_snapshot\\src\\mobilenet_enterprise\\models\\three_d\\stem_blocks.py": "4f64197eef42a1d3e3faf572345eb87918faac50a93fc9e15f68f3b3d68eb0aa",
+    "code_snapshot\\src\\mobilenet_enterprise\\models\\three_d\\__init__.py": "d581356047bea1a1338a3f2c396b2ecbd1e345dc3156bfce838a091511cc70ef",
+    "code_snapshot\\src\\mobilenet_enterprise\\models\\two_d\\mobilenet_v3.py": "787ce531b8d14f079b114e16ad6f451ded9ee68874c25ff1b9d8e9f0221149de",
+    "code_snapshot\\src\\mobilenet_enterprise\\models\\two_d\\__init__.py": "7fad39cd43b965328a1edcc0e65f1f81a4d61a0a667e87d0fdf3705998862ca2",
+    "code_snapshot\\src\\mobilenet_enterprise\\utils\\pretrained.py": "a13000739cbbef9aafbdcfc6bd95eb1dbd0891bb55ab6be71bc5061f9dc2d430",
+    "code_snapshot\\scripts\\train.py": "c9bcb14a9ea8c2a431c2db0bf53587b1a37f6d0386a7250dbe9df4146e224099",
+    "code_snapshot\\src\\mobilenet_enterprise\\engine\\trainer.py": "7f793ff16a0eda217e525ea11025723a651b1ab7424aa446f89ca887407c3b56"
+  }
+}

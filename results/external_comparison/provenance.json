@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-06",
+  "source": "User-provided updated table; user explicitly confirmed five training seeds 42–46",
+  "training_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "classification_values": "Reported mean and SD supplied by author",
+  "latency_values": "Mean and reported SD supplied by author; within-run vs between-run aggregation not separately confirmed",
+  "local_run_ledger_at_update": "Existing external five-seed suite still records seed42 imports and additional seeds in progress; not used to independently recompute these new SD values",
+  "old_single_seed_records_preserved": true,
+  "new_summaries_independently_recomputed": false
+}
