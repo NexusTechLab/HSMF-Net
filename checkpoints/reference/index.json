@@ -1,24 +1,20 @@
 [
   {
     "model": "S7",
-    "seed": 42,
-    "epoch": 64,
-    "source_checkpoint_sha256": "441b42f6718fc3fdbb5fe4c5426dbeb13bcdd10242a6c743195f3489b481252c",
-    "selection_stream": "ema_model",
-    "historical_prediction_stream": "UNRESOLVED",
-    "scope": "Reference weights extracted without optimizer; not a resumable training checkpoint",
-    "file": "reference_weights\\S7_seed42.pt",
-    "sha256": "25919039e14aa64b08b4774680fd5d3a025dbc8b2590ed43f02a6cb53d0c3f3a"
+    "file": "S7_seed42.pt",
+    "streams": [
+      "model",
+      "ema_model"
+    ],
+    "sha256": "5a80698096f8b73f82971d87d481fe2084b020162cbfac9988119f8bd743fc18"
   },
   {
     "model": "S8",
-    "seed": 42,
-    "epoch": 51,
-    "source_checkpoint_sha256": "2d41fcd77a877603c3d8263a7b4a726978d0c774a704e4e0b0708d05120802a1",
-    "selection_stream": "ema_model",
-    "historical_prediction_stream": "UNRESOLVED",
-    "scope": "Reference weights extracted without optimizer; not a resumable training checkpoint",
-    "file": "reference_weights\\S8_seed42.pt",
-    "sha256": "f3eb3615b7d3f2db39facd7958b81be8c70e35b169b4fcbaf720e34c13ea9bc1"
+    "file": "S8_seed42.pt",
+    "streams": [
+      "model",
+      "ema_model"
+    ],
+    "sha256": "93d3b407b9f2d1a5811609c8e1e9a48f0bbf4604b36b4668eb47f36ad750bba1"
   }
 ]

@@ -1,3 +1,0 @@
-﻿cultivar_a,cultivar_b,split,n_a,n_b,n_wavelengths,wavelength_low_nm,wavelength_high_nm,mean_absolute_class_mean_difference,bootstrap_percentile_95_low,bootstrap_percentile_95_high,bootstrap_repetitions
-ZM22,XK129,train,700,700,121,1201.28,1399.09,0.029109862994275093,0.02659179315314471,0.031701401655849205,2000
-CX186,ZM379,train,630,630,121,1201.28,1399.09,0.0017918046909368224,0.0012196026286900757,0.0038306170278090143,2000

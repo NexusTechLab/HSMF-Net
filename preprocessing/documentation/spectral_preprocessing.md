@@ -1,7 +1,7 @@
-# Spectral preprocessing and wavelength indexing
+# Spectral preprocessing
 
-Foreground-pixel SG smoothing uses window length 11, polynomial order 3, derivative order 0 and nearest-value boundary handling. SPA then operates on one foreground-averaged spectrum per designated training kernel. Per-kernel anomaly interpolation/boundary treatment is distinct from SG smoothing and from network-input normalization.
+Savitzky-Golay smoothing uses an 11-band window and a third-order polynomial with derivative order zero and nearest-value boundary handling. Foreground averaging produces one spectrum per kernel for band selection.
 
-SPA columns are centered and divided by population SD; divisors below 1e-8 are set to one. The float32 selector starts at the first exact computed maximum of standardized variance, then maximizes least-squares residual norms in ascending candidate order. Near-unit variances make the initialization numerically sensitive. See spectral_selection/SPA_NUMERICAL_CONTRACT.md and the supplied numerical audit.
+Band indices are zero-based. For 454 bands, excluding the first 10 and last 15 leaves candidate indices 10 through 438. Selected input bands are ordered by increasing index. Fixed SPA-24 and SPA-50 lists and the wavelength calibration are in `spectral_selection/`.
 
-Indices are zero-based. With 454 bands, excluding 0–9 and 439–453 leaves candidates 10–438 inclusive. The calibrated selected-band mapping is in spectral_selection/wavelengths/. Input order is ascending wavelength order, not progressive SPA selection order. Archived SPA-24/50 and the current training-only refit are distinct records; a current fit does not recover missing historical fit inputs.
+The SPA implementation in `src/mobilenet_enterprise/data/wheat_seed_hsi.py` standardizes candidate columns and selects successive projection residuals. Its initial maximum-variance choice after standardization is sensitive to floating-point rounding; use the supplied fixed indices when the same input bands are required. Estimate new selections from training data only.

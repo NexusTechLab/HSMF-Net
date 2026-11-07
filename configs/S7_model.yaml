@@ -1,0 +1,19 @@
+model:
+  name: rgb_hsi_mid_film
+  num_classes: 4
+  width_mult: 1.0
+  dropout: 0.35
+  input_channels: 3
+  fusion:
+    type: hbfm
+    num_fusion_stages: 2
+    mid_channels: 40
+    late_channels: 96
+    rgb_variant: v3_small
+    hsi_backbone: hybrid_3d2d
+    hsi_variant: small
+    hsi_bands: 50
+    hsi_stem3d_channels: '[16, 32]'
+    hsi_spectral_bins: 8
+    hsi_tiny_spatial_enabled: true
+    hsi_classifier_hidden: 192

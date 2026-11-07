@@ -313,7 +313,6 @@ def main():
 
 
 # # 默认裁剪
-# python resize_process.py -d "F:\HSI_RGB小麦数据集\RGB小麦图像_去背景\RGB_春晓186_去背景"
 
 # # 调整裁剪参数
 # python resize_process.py -d "你的图片文件夹" --crop-threshold 20 --crop-padding 10

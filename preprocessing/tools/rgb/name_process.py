@@ -160,8 +160,6 @@ def rename_files_in_folder(folder_path, preview=True, old_prefix=None, new_prefi
 
 
 
-# python name_process.py -d "F:\HSI_RGB小麦数据集\RGB_春晓186" --new-prefix CX186 --old-prefix ZM379 --execute
-# python name_process.py -d "F:\HSI_RGB小麦数据集\RGB小麦图像_原图像\RGB_许科129" --new-prefix XK129 --execute
 
 if __name__ == "__main__":
     import sys

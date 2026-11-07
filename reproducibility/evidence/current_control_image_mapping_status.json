@@ -1,9 +1,0 @@
-{
-  "finding": "The inspected current-control PNG CX186_0025.png contains a band-60 kernel display and mean-spectrum plot, whereas the camera-RGB archive supplies a distinct cropped PNG with the same stem.",
-  "scope": "file provenance of current controls; historical S8 input provenance is not inferred",
-  "example_recorded_control_path": "datasets/splits/matched24_actual.csv",
-  "author_statement": "Study RGB images originate from an independent camera, confirmed 2026-11-06",
-  "current_control_camera_equivalence_verified": false,
-  "action_needed": "Supply the actual camera-RGB training manifest/record or rerun affected controls using authenticated camera-RGB inputs. Do not relabel existing control scores as a new camera-input run.",
-  "model_results_changed": false
-}

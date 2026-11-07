@@ -1,7 +1,0 @@
-﻿method,label,year,modalities,pretrained,n_runs,expected_runs,status,accuracy_pct_mean,accuracy_pct_sd,macro_f1_pct_mean,macro_f1_pct_sd,params_m_mean,params_m_sd,gflops_mean,gflops_sd,latency_ms_mean_mean,latency_ms_mean_sd
-cloln,CLOLN (input-adapted),2024,HSI,False,1,1,complete,88.24561403508773,,88.34881197034329,,0.00319,,0.002562496,,0.6992769591510296,
-mixersenet,MixerSENet (PyTorch port),2025,HSI,False,1,1,complete,94.3859649122807,,94.43939967606909,,0.052044,,0.055962112,,6.07580512791872,
-convsst,3D-ConvSST (input-adapted),2024,HSI,False,1,1,complete,93.50877192982456,,93.63129946994482,,0.229412,,0.484983296,,8.494507377147675,
-resnet_rh,ResNet-R&H (SPA24-adapted),2024,RGB+HSI mean spectrum,False,1,1,complete,85.26315789473684,,85.31448486162931,,11.17146,,0.625512448,,4.274603042006492,
-mft,MFT (RGB-HSI adapted),2023,RGB+HSI,False,1,1,complete,90.35087719298245,,90.43327922552717,,0.22634,,0.04049846,,7.391064961254597,
-hsmf,"HSMF-Net (matched protocol, scratch)",,RGB+HSI,False,1,1,complete,93.6842105263158,,93.69789181016236,,2.659402,,0.635870016,,50.56117158889771,

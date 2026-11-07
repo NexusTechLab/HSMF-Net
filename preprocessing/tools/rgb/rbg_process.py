@@ -285,11 +285,8 @@ def main():
 
 
 # # 仅保存结果
-# python rbg_process.py -d "F:\HSI_RGB小麦数据集\RGB_郑麦379"
 # # 指定CPU核心数
-# python rbg_process.py -d "F:\HSI_RGB小麦数据集\RGB小麦图像_原图像\RGB_许科129" --workers 4
 # # 保存结果并保存过程图
-# python rbg_process.py -d "F:\HSI_RGB小麦数据集\RGB小麦图像_原图像\RGB_春晓186" --workers 4 --save-steps
 
 if __name__ == "__main__":
 	main()

@@ -1,8 +1,0 @@
-{
-  "n_training_hsi": 2660,
-  "ordered_ids_labels_hdr_paths_identical": true,
-  "hdr_and_raw_content_hashes_rechecked": true,
-  "refit_source_manifest_sha256": "9d0d937f3aeef945f99cd4a016983270001bd4c94c296ea9475370d77c6c067e",
-  "active_image_policy": "<rgb_root>/<cultivar>/hsi/; same-stem HSI-directory image exports (legacy input)",
-  "reason": "Only image paths changed; SPA fitting used the same authenticated HSI training records and no image branch data."
-}

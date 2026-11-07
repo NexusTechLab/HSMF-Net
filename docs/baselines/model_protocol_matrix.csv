@@ -1,9 +1,0 @@
-﻿model,bands,rgb_size,hsi_size,batch_size,epochs,pretrained_requested,model_dropout,amp,grad_clip,weighted_sampler,sampler_ZM379_multiplier,rgb_erasing,hsi_independent_flip,paired_flip,workers,prefetch
-S1,NA,224,NA,16,100,True,0.2,True,1.0,True,1.6,0.25,NA,NA,4,4
-S2,50,NA,24,16,100,False,0.35,False,0.5,False,NA,NA,0.5,NA,2,2
-S3,50,NA,24,16,100,True,0.35,False,0.5,False,NA,NA,0.5,NA,2,2
-S4,50,224,24,16,100,True,0.35,False,0.5,False,NA,0.15,0.0,0.5,2,2
-S5,50,224,24,16,100,True,0.35,False,0.5,False,NA,0.15,0.0,0.5,2,2
-S6,50,224,24,16,100,True,0.35,False,0.5,False,NA,0.15,0.0,0.5,2,2
-S7,50,224,24,16,100,True,0.35,False,0.5,False,NA,0.15,0.0,0.5,2,2
-S8,24,224,24,16,100,True,0.35,False,0.5,False,NA,0.15,0.0,0.5,2,2

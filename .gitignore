@@ -5,7 +5,12 @@ __pycache__/
 venv/
 .env
 .env.*
+*.egg-info/
+build/
+dist/
 artifacts/
+results/
+logs/
 *.log
 .DS_Store
 Thumbs.db
@@ -13,4 +18,3 @@ datasets/*.zip
 datasets/*.7z
 datasets/raw/
 datasets/cache/
-spa_replay_result.json
